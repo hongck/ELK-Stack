@@ -1,3 +1,1 @@
-Welcome to the elastic wiki!
-
-[hi](http://higee.io)
+Elastic Stack을 사용하는 데 도움이 되는 자료 및 사용법입니다 :D
