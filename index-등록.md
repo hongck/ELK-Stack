@@ -15,7 +15,7 @@
        [[ images/management_configure-an-index-pattern.png | height = 500px | width = 1024px]]
     * 복수개의 elasticsearch index를 보고 싶을 때 : wildcard를 적절히 이용해서 입력 (자세히는 [elastic 참조](https://www.elastic.co/guide/en/kibana/current/index-patterns.html))
   
-       [[ images/management_configure-index-patterns.png| height = 500px | width = 1024px]]
+       [[ images/management_configure-index-patterns.png | height = 500px | width = 1024px]]
 * `Time Filter field name`
     * kibana는 기본적으로 시계열 데이터가 들어올 것이라고 생각한다.
  
