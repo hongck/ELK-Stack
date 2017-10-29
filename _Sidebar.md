@@ -20,6 +20,8 @@
         * [대시보드 제작]
    * 추가 기능
         * [데이터 검색 및 필터]
+        * [필드 관리]
+        * [스크립트 필드]
         * [query 방법](https://github.com/higee/elastic/wiki/%ED%82%A4%EB%B0%94%EB%82%98-%EC%A7%88%EC%9D%98-%EB%A7%81%ED%81%AC-%EB%AA%A8%EC%9D%8C)
 
 **기타**
