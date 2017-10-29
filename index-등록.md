@@ -1,6 +1,8 @@
 * web browser를 통해 kibana에 접속한다
     * local에서 사용하는 경우 : `http://localhost:5601`
     * cloud에서 사용하는 경우 : `http://{ip주소}:5601`
+        * {}를 제거하고 ip를 입력한다.
+        * 예) `http://12.345.6.789:5601`
 * `Management`에서 `Index Patterns` 선택
 
     [[ images/management_index-patterns.png | height = 500px | width = 1024px]]
