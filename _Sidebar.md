@@ -18,6 +18,8 @@
         * [데이터 탐색](https://github.com/higee/elastic/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%90%EC%83%89)
         * [데이터 시각화]
         * [대시보드 제작]
+   * visualize
+        * [timelion](https://github.com/higee/elastic/wiki/Timelion)
    * 추가 기능
         * [데이터 검색 및 필터]
         * [필드 관리]
