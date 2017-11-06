@@ -3,10 +3,10 @@
    * [데이터 Type]
    * [Index Mapping]
    * [Aggregation]
-       * [Bucket Aggregation]
-       * [Metric Aggregation]
-       * [Parent Pipeline Aggregation]
-       * [Sibling Aggregation]
+       * [Bucket Agg]
+       * [Metric Agg]
+       * [Parent Pipeline Agg]
+       * [Sibling Agg]
 
 **Logstash**
 
