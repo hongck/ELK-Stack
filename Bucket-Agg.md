@@ -22,76 +22,97 @@
 
 ---
 
+#### Date Histogram Aggregation<a name="dh"></a>
 
-`Date Histogram Aggregation`<a name="dh"></a>
-
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| Date Field의 Histogram 각 구간으로 Bucket 생성 | Date| Interval : 초, 분, 시간, 일, 주, 월, custom |
+* 역할 : Date Field의 Histogram 각 구간으로 Bucket 생성
+* Date Type : Date
+* 주요 옵션
+    * Interval : 구간을 얼마나 잘게 나눌지 설정
+        * 옵션 : 밀리초, 초, 분, 시, 일, 주, 월, custom
 
 [[ images/bucket_agg_date_histogram.gif | height = 500px | width = 1024px]]
 
-`Date Range Aggregation`<a name="dr"></a>
+#### Date Range Aggregation<a name="dr"></a>
 
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| 옵션으로 설정한 Date Field의 각 구간으로 Bucket 생성 | Date| From : 구간 시작 Date <br /> To : 구간 끝 Date
+
+* 역할 : 각 Date 구간의 시작과 끝점을 설정하여 Bucket 생성
+* Date Type : Date
+* 주요 옵션
+    * From : 구간 시작 날짜
+    * To : 구간 끝 날짜
 
 [[ images/bucket_agg_date_range.gif | height = 450px | width = 1024px]]
 
-`Histogram Aggregation`<a name="ha"></a>
+#### Histogram Aggregation<a name="ha"></a>
 
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| Number Field의 각 구간으로 Bucket 생성 | Number | Interval : 각 구간의 간격 설정
+
+* 역할 : Number Field의 각 구간으로 Bucket 생성
+* Date Type : Number
+* 주요 옵션
+    * Interval : 각 구간 간격 설정
 
 [[ images/bucket_agg_histogram.gif | height = 500px | width = 1024px]]
 
-`Range Aggregation`<a name="ra"></a>
+#### Range Aggregation<a name="ra"></a>
 
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| 옵션으로 설정한 Number Field의 각 구간으로 Bucket 생성 | Number| From : 구간 시작 값 <br /> To : 구간 끝 값
+
+* 역할 : 옵션으로 설정한 Number Field의 각 구간으로 Bucket 생성
+* Date Type : Number
+* 주요 옵션
+    * From : 구간 시작 값
+    * To : 구간 끝 값
 
 [[ images/bucket_agg_range.gif | height = 500px | width = 1024px]]
 
-`Terms Aggregation`<a name="ta"></a>
+#### Terms Aggregation<a name="ta"></a>
 
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| 선택한 Term를 기준으로 Bucket 생성 | Date, Number, Ip, String|  Field : 적용할 Field 선택 <br /> Order by : 정렬 기준 선택 <br /> Order : 오름/내림차순 결정 <br /> Size : Bucket 개수 결정
+* 역할 : 선택한 Term를 기준으로 Bucket 생성
+* Date Type : Date, Number, IP, String
+* 주요 옵션
+    * Field : 적용할 Field 선택
+    * Order By : Field 값들을 어떤 기준으로 정렬할 것인지 설정
+        * 옵션
+            * Custom Metric : 어떤 Metric Agg로 할 것인지 설정
+            * Term : 값 자체로 대소 비교 (string : alphabet, number : 대소)
+    * Order : Order By된 값들을 오름차순 또는 내림차순 할 것인지 설정
+    * Size : Bucket 개수 결정
 
 [[ images/bucket_agg_terms.gif | height = 500px | width = 1024px]]
 
-`Significant Terms Aggregation`<a name="st"></a>
+#### Significant Terms Aggregation<a name="st"></a>
 
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| Background 대비 선택한 Foreground에서 특별한 Term으로 Bucket 생성 | String| Field <br /> Size : Bucket 몇 개 생성할 지 결정
+* 역할 : Background 대비 선택한 Foreground에서 특별한 Term으로 Bucket 생성
+* Date Type : String
+* 주요 옵션
+    * Size : Bucket 몇 개 생성할 지 설정
 
 [[ images/bucket_agg_significant_terms.gif | height = 500px | width = 1024px]]
 
-`Filters Aggregation`<a name="fa"></a>
+#### Filters Aggregation<a name="fa"></a>
 
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| Query String으로 작성한 조건 만족하는 Bucket 생성 | {} | Filters : [Query String 문법](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html)
+* 역할 : [Query String](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html)으로 작성한 조건 만족하는 Bucket 생성
+* Date Type : *
 
 [[ images/bucket_agg_filters.gif | height = 500px | width = 1024px]]
 
-`Geo Hash Aggregation`<a name="gh"></a>
+#### Geo Hash Aggregation<a name="gh"></a>
 
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| Geo Point Field의 각 Centroid로 Bucket 생성 | Geo Point| Precision : Centroid로 묶을 범위 (작으면 많이 묶인다)
+* 역할 : Geo Point Field의 각 Centroid로 Bucket 생성
+* Date Type : Geo Point
+* 주요 옵션
+    * Precision : Centroid에서 얼마나 가까이/멀리까지 묶을지 설정 (작으면 많이 묶인다)
 
 [[ images/bucket_agg_geo_hash.gif | height = 500px | width = 1024px]]
 
+#### IPv4 Aggregation<a name="ip"></a>
 
-`IPv4 Aggregation`<a name="ip"></a>
-
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| IP값의 범위/성격으로 Bucket 생성 | ip| From & To : IP 범위 설정 <br /> Mask : CIDR 마스크
+* 역할 : IP값의 범위/성격으로 Bucket 생성
+* Date Type : IP
+* 주요 옵션
+    * Use From/To
+        * From  : 구간 내 가장 작은 IP 주소값
+        * To : 구간 내 가장 큰 IP 주소값
+    * Use CIDR Masks
+        * Mask : CIDR mask 설정
 
 [[ images/bucket_agg_ipv4.gif | height = 500px | width = 1024px]]
