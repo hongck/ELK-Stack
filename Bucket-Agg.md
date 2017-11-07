@@ -10,10 +10,20 @@
 
 ### 종류
 
-[Date Histogram](#introduction)
+* [Date Histogram Aggregation](#dh)
+* [Date Range Aggregation](#dr)
+* [Histogram Aggregation](#ha)
+* [Range Aggregation](#ra)
+* [IPv4 Aggregation](#ip)
+* [Terms Aggregation](#ta)
+* [Significant Terms Aggregation](#st)
+* [Filters Aggregation](#fa)
+* [Geo Hash Aggregation](#gh)
+
+---
 
 
-`Date Histogram Aggregation`
+`Date Histogram Aggregation`<a name="dh"></a>
 
 | 역할  | Data Type | 주요 옵션 | 
 |-------------------|:------:| ----------|
@@ -21,7 +31,7 @@
 
 [[ images/bucket_agg_date_histogram.gif | height = 500px | width = 1024px]]
 
-`Date Range Aggregation`
+`Date Range Aggregation`<a name="dr"></a>
 
 | 역할  | Data Type | 주요 옵션 | 
 |-------------------|:------:| ----------|
@@ -29,7 +39,7 @@
 
 [[ images/bucket_agg_date_range.gif | height = 450px | width = 1024px]]
 
-`Histogram Aggregation`
+`Histogram Aggregation`<a name="ha"></a>
 
 | 역할  | Data Type | 주요 옵션 | 
 |-------------------|:------:| ----------|
@@ -37,7 +47,7 @@
 
 [[ images/bucket_agg_histogram.gif | height = 500px | width = 1024px]]
 
-`Range Aggregation`
+`Range Aggregation`<a name="ra"></a>
 
 | 역할  | Data Type | 주요 옵션 | 
 |-------------------|:------:| ----------|
@@ -45,15 +55,7 @@
 
 [[ images/bucket_agg_range.gif | height = 500px | width = 1024px]]
 
-`IPv4 Aggregation`
-
-| 역할  | Data Type | 주요 옵션 | 
-|-------------------|:------:| ----------|
-| IP값의 범위/성격으로 Bucket 생성 | ip| From & To : IP 범위 설정 <br /> Mask : CIDR 마스크
-
-[[ images/bucket_agg_ipv4.gif | height = 500px | width = 1024px]]
-
-`Terms Aggregation`
+`Terms Aggregation`<a name="ta"></a>
 
 | 역할  | Data Type | 주요 옵션 | 
 |-------------------|:------:| ----------|
@@ -61,7 +63,7 @@
 
 [[ images/bucket_agg_terms.gif | height = 500px | width = 1024px]]
 
-`Significant Terms Aggregation`
+`Significant Terms Aggregation`<a name="st"></a>
 
 | 역할  | Data Type | 주요 옵션 | 
 |-------------------|:------:| ----------|
@@ -69,7 +71,7 @@
 
 [[ images/bucket_agg_significant_terms.gif | height = 500px | width = 1024px]]
 
-`Filters Aggregation`
+`Filters Aggregation`<a name="fa"></a>
 
 | 역할  | Data Type | 주요 옵션 | 
 |-------------------|:------:| ----------|
@@ -77,10 +79,19 @@
 
 [[ images/bucket_agg_filters.gif | height = 500px | width = 1024px]]
 
-`Geo Hash Aggregation`
+`Geo Hash Aggregation`<a name="gh"></a>
 
 | 역할  | Data Type | 주요 옵션 | 
 |-------------------|:------:| ----------|
 | Geo Point Field의 각 Centroid로 Bucket 생성 | Geo Point| Precision : Centroid로 묶을 범위 (작으면 많이 묶인다)
 
 [[ images/bucket_agg_geo_hash.gif | height = 500px | width = 1024px]]
+
+
+`IPv4 Aggregation`<a name="ip"></a>
+
+| 역할  | Data Type | 주요 옵션 | 
+|-------------------|:------:| ----------|
+| IP값의 범위/성격으로 Bucket 생성 | ip| From & To : IP 범위 설정 <br /> Mask : CIDR 마스크
+
+[[ images/bucket_agg_ipv4.gif | height = 500px | width = 1024px]]
