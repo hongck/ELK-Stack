@@ -10,6 +10,9 @@
 
 ### 종류
 
+[Date Histogram](#introduction)
+
+
 `Date Histogram Aggregation`
 
 | 역할  | Data Type | 주요 옵션 | 
