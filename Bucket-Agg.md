@@ -54,7 +54,7 @@
 
 | 역할  | Data Type | 주요 옵션 | 
 |-------------------|:------:| ----------|
-| 선택한 Term를 기준으로 Bucket 생성 | Date, Number, Ip, String|  Field : 적용할 Field 선택 <br /> Order by : 정렬 기준 선택 <br /> Order : 오름차순/내림차순 결정 <br /> Size : Bucket 개수 결정
+| 선택한 Term를 기준으로 Bucket 생성 | Date, Number, Ip, String|  Field : 적용할 Field 선택 <br /> Order by : 정렬 기준 선택 <br /> Order : 오름/내림차순 결정 <br /> Size : Bucket 개수 결정
 
 [[ images/bucket_agg_terms.gif | height = 500px | width = 1024px]]
 
