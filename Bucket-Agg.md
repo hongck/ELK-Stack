@@ -80,4 +80,4 @@
 |-------------------|:------:| ----------|
 | Geo Point Field의 각 Centroid로 Bucket 생성 | Geo Point| Precision : Centroid로 묶을 범위 (작으면 많이 묶인다)
 
-[[ images/bucket_agg_geo_hash.png | height = 500px | width = 1024px]]
+[[ images/bucket_agg_geo_hash.gif | height = 500px | width = 1024px]]
