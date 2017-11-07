@@ -245,6 +245,7 @@ legend에 각 .es()를 나타낼 이름을 정한다
 [[ images/timelion_title.png | height = 500px | width = 1024px]]
 
 ### source
-* [timelion](https://github.com/elastic/timelion/blob/master/FUNCTIONS.md)
+* [timelion github](https://github.com/elastic/timelion/blob/master/FUNCTIONS.md)
 * [timelion youtube](https://www.youtube.com/watch?v=-sgZdW5k7eQ)
-* [tim roes](https://www.timroes.de/2017/08/02/timelion-tutorial-from-zero-to-hero/)
+* [timelion elastic blog](https://www.elastic.co/blog/timeseries-if-then-else-with-timelion)
+* [timelion tutorial - timroes](https://www.timroes.de/2017/08/02/timelion-tutorial-from-zero-to-hero/)
