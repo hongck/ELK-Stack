@@ -6,8 +6,37 @@
 * chain을 잘 사용하는 것이 point! 대부분의 경우 chain, chain해서 사용한다 `es().sum(10).scale_interval(1h).label('chain..')`
 
 ---
+
+### 목록
+
+* [기본함수 - `.es`](#es)
+* [조건함수 - `.es().if()`](#if)
+* [수학함수 - `.es().multiply()`](#mul)
+* [수학함수 - `.es().divide()`](#div)
+* [수학함수 - `.es().subtract()`](#sub)
+* [수학함수 - `.es().sum()`](#sum)
+* [수학함수 - `.es().abs()`](#abs)
+* [수학함수 - `.es().log()`](#log)
+* [수학함수 - `.es().max()`](#max)
+* [수학함수 - `.es().min()`](#min)
+* [수학함수 - `.es().static()`](#static)
+* [수학함수 - `.es().cusum()`](#cusum)
+* [수학함수 - `.es().derivative()`](#derivative)
+* [수학함수 - `.es().movingaverage()`](#mvavg)
+* [수학함수 - `.es().scale_interval()`](#si)
+* [수학함수 - `.es().range()`](#rg)
+* [스타일함수 - `.es().bars()`](#bar)
+* [스타일함수 - `.es().lines()`](#ln)
+* [스타일함수 - `.es().points()`](#poi)
+* [스타일함수 - `.es().label()`](#lb)
+* [스타일함수 - `.es().color()`](#cl)
+* [스타일함수 - `.es().yaxis()`](#yaxis)
+* [스타일함수 - `.es().title()`](#title)
+
+---
 ### 기본함수
-#### `.es()`
+#### `.es()` <a name="es"></a>
+
 
 모든 index의 모든 document의 개수를 y축으로 갖고, `@timestamp`를 x축으로 갖는 그래프가 생성된다
 
@@ -24,7 +53,8 @@
 
 ---
 ### 조건함수
-#### `.es().if()`
+#### `.es()` <a name="if"></a>
+
 
 .es()의 각 point를 설정한 조건과 비교하여 참(거짓)일 경우 설정한 값을 반환한다
 
@@ -39,7 +69,7 @@
 
 ---
 ### 수학함수
-#### `.es().multiply()`
+#### `.es().multiply()` <a name="mul"></a>
 
 .es() 값에 상수/그래프(값)을 곱한다
 
@@ -49,7 +79,7 @@
 
 [[ images/timelion_multiply.png | height = 500px | width = 1024px]]
 
-#### `.es().divide()`
+#### `.es().divide()`<a name="div"></a>
 
 .es() 값에 상수/그래프(값)으로 나눈다
 
@@ -59,7 +89,7 @@
 
 [[ images/timelion_divide.png | height = 500px | width = 1024px]]
 
-#### `.es().subtract()`
+#### `.es().subtract()`<a name="sub"></a>
 
 .es() 값에 상수/그래프(값)으로 뺀다
 
@@ -69,7 +99,7 @@
 
 [[ images/timelion_subtract.png | height = 500px | width = 1024px]]
 
-#### `.es().sum()`
+#### `.es().sum()`<a name="sum"></a>
 
 .es() 값에 상수/그래프(값)를 더한다
 
@@ -79,13 +109,13 @@
 
 [[ images/timelion_sum.png | height = 500px | width = 1024px]]
 
-#### `.es().abs()`
+#### `.es().abs()`<a name="abs"></a>
 
 .es() 값에 절대값을 취한다
 
 [[ images/timelion_abs.png | height = 500px | width = 1024px]]
 
-#### `.es().log()`
+#### `.es().log()`<a name="log"></a>
 
 .es() 값에 로그를 취한다
 
@@ -95,7 +125,7 @@
 
 [[ images/timelion_log.png | height = 500px | width = 1024px]]
 
-#### `.es().max()`
+#### `.es().max()`<a name="max"></a>
 
 두 값/그래프(값) 중 큰 값을 반환한다
 
@@ -105,7 +135,7 @@
 
 [[ images/timelion_max.png | height = 500px | width = 1024px]]
 
-#### `.es().min()`
+#### `.es().min()`<a name="min"></a>
 
 두 값/그래프(값) 중 작은 값을 반환한다
 
@@ -115,7 +145,7 @@
 
 [[ images/timelion_min.png | height = 500px | width = 1024px]]
 
-#### `.static()`
+#### `.static()`<a name="static"></a>
 
 일정한 값을 갖는 상수함수를 생성한다
 
@@ -125,19 +155,19 @@
 
 [[ images/timelion_static.png | height = 500px | width = 1024px]]
 
-#### `.es().cusum()`
+#### `.es().cusum()`<a name="cusum"></a>
 
 .es()의 누적합을 구한다
 
 [[ images/timelion_cusum.png | height = 500px | width = 1024px]]
 
-#### `.es().derivative()`
+#### `.es().derivative()`<a name="derivative"></a>
 
 .es()와 .es()의 이전 값과의 차를 구한다
 
 [[ images/timelion_derivative.png | height = 500px | width = 1024px]]
 
-#### `.es().movingaverage()`
+#### `.es().movingaverage()`<a name="mvavg"></a>
 
 .es()의 이동평균값을 구한다
 
@@ -148,7 +178,7 @@
 
 [[ images/timelion_movingaverage.png | height = 500px | width = 1024px]]
 
-#### `.es().scale_interval()`
+#### `.es().scale_interval()`<a name="si"></a>
 
 .es()의 interval을 조정한다
 
@@ -158,7 +188,7 @@
 
 [[ images/timelion_scale_interval.png | height = 500px | width = 1024px]]
 
-#### `.es().range()`
+#### `.es().range()`<a name="rg"></a>
 
 .es()의 값을 특정 범위 내의 값으로 조정한다
 
@@ -172,7 +202,7 @@
 ---
 
 ### 스타일 함수
-#### `.es().bars()`
+#### `.es().bars()`<a name="bar"></a>
 
 .es()를 막대 그래프로 나타낸다
 
@@ -182,7 +212,7 @@
 
 [[ images/timelion_bars.png | height = 500px | width = 1024px]]
 
-#### `.es().lines()`
+#### `.es().lines()`<a name="ln"></a>
 
 .es()를 라인 그래프로 나타낸다
 
@@ -193,7 +223,7 @@
 
 [[ images/timelion_lines.png | height = 500px | width = 1024px]]
 
-#### `.es().points()`
+#### `.es().points()`<a name="poi"></a>
 
 .es()를 점 그래프로 나타낸다
 
@@ -207,19 +237,19 @@
 
 [[ images/timelion_points.png | height = 500px | width = 1024px]]
 
-#### `.es.label()`
+#### `.es().label()`<a name="lb"></a>
 
 legend에 각 .es()를 나타낼 이름을 정한다
 
 [[ images/timelion_label.png | height = 500px | width = 1024px]]
 
-#### `.es().color()`
+#### `.es().color()`<a name="cl"></a>
 
 .es()를 나타낼 색깔을 정한다
 
 [[ images/timelion_color.png | height = 500px | width = 1024px]]
 
-#### `.es().yaxis()`
+#### `.es().yaxis()`<a name="yaxis"></a>
 
 .es()의 y축 정보를 설정한다
 
@@ -234,7 +264,7 @@ legend에 각 .es()를 나타낼 이름을 정한다
 
 [[ images/timelion_yaxis.png | height = 500px | width = 1024px]]
 
-#### `.es().title()`
+#### `.es().title()`<a name="title"></a>
 
 .es() 제목을 설정한다
 
