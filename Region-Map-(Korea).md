@@ -90,7 +90,7 @@
             * (layer 아래) name : Kibana Region Map에서 Vector Map 선택지에 표시되는 이름
             * url : Geo Json이 올라간 곳의 url로 아래 이미지의 링크 부분을 입력하면 된다
 
-[[ images/region_map_geo_json.png | height = 300px | width = 1024px]]
+[[ images/region_map_kibana_yml.png | height = 500px | width = 1024px]]
             * (field 아래) name : Geo Json 파일에서 `서울특별시`, `제주특별자치도` 등의 값을 담고 있는 field 이름으로 위의 이미지에서 보면 name으로 되어 있기에 여기도 name으로 써줘야 한다
             * (field 아래) description : Kibana Region Map에서 Join Field에 표시되는 이름
 
