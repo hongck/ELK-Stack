@@ -23,7 +23,7 @@
     * Metric
         * Aggregation : 적용할 Agg 선택
 
-[[ images/sb_agg_avg.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/sibling/avg.gif | height = 500px | width = 1024px]]
 
 #### Sum Bucket Aggregation <a name="sum"></a>
 
@@ -34,7 +34,7 @@
     * Metric
         * Aggregation : 적용할 Agg 선택
 
-[[ images/sb_agg_sum.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/sibling/sum.gif | height = 500px | width = 1024px]]
 
 #### Min Bucket Aggregation <a name="min"></a>
 
@@ -45,7 +45,7 @@
     * Metric
         * Aggregation : 적용할 Agg 선택
 
-[[ images/sb_agg_min.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/sibling/min.gif | height = 500px | width = 1024px]]
 
 #### Max Bucket Aggregation <a name="max"></a>
 
@@ -57,4 +57,4 @@
         * Aggregation : 적용할 Agg 선택
 
 
-[[ images/sb_agg_max.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/sibling/max.gif | height = 500px | width = 1024px]]
