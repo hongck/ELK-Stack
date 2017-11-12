@@ -1,3 +1,5 @@
+[[ images/management-index-pattern.gif | height = 500px | width = 1024px]]
+
 * web browser를 통해 kibana에 접속한다
     * local에서 사용하는 경우 : `http://localhost:5601`
     * cloud에서 사용하는 경우 : `http://{ip주소}:5601`
