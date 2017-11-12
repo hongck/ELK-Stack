@@ -1,7 +1,7 @@
 ### 개요
 
 * 기본적으로 이미 (parent) aggregation된 결과물에 대해 aggregate 수행
-
+* 실제로 어떤 과정으로 계산이 이루어지는지는 [여기](https://github.com/higee/elastic/blob/master/Week1_Kibana/aggregation/parent_pipeline_aggregation.ipynb)를 참고해주세요
 ### 주의
 
 * Parent Pipeline Agg를 사용하려면 parent로 date_histogram 또는 histogram을 사용해야 한다.
@@ -55,4 +55,4 @@
         * Aggregation : 적용할 Agg 종류 선택
         * Field : Agg 적용할 Field 선택
 
-[[ images/pp_agg_serial_diff.gif | height = 500px | width = 1024px]]
+[[ images/pp_agg_seiral_diff.gif | height = 500px | width = 1024px]]
