@@ -30,7 +30,7 @@
     * Interval : 구간을 얼마나 잘게 나눌지 설정
         * 옵션 : 밀리초, 초, 분, 시, 일, 주, 월, custom
 
-[[ images/bucket_agg_date_histogram.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/bucket/date_histogram.gif | height = 500px | width = 1024px]]
 
 #### Date Range Aggregation<a name="dr"></a>
 
@@ -41,7 +41,7 @@
     * From : 구간 시작 날짜
     * To : 구간 끝 날짜
 
-[[ images/bucket_agg_date_range.gif | height = 450px | width = 1024px]]
+[[ images/aggregation/bucket/date_range.gif | height = 450px | width = 1024px]]
 
 #### Histogram Aggregation<a name="ha"></a>
 
@@ -51,7 +51,7 @@
 * 주요 옵션
     * Interval : 각 구간 간격 설정
 
-[[ images/bucket_agg_histogram.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/bucket/histogram.gif | height = 500px | width = 1024px]]
 
 #### Range Aggregation<a name="ra"></a>
 
@@ -62,7 +62,7 @@
     * From : 구간 시작 값
     * To : 구간 끝 값
 
-[[ images/bucket_agg_range.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/bucket/range.gif | height = 500px | width = 1024px]]
 
 #### Terms Aggregation<a name="ta"></a>
 
@@ -77,7 +77,7 @@
     * Order : Order By된 값들을 오름차순 또는 내림차순 할 것인지 설정
     * Size : Bucket 개수 결정
 
-[[ images/bucket_agg_terms.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/bucket/terms.gif | height = 500px | width = 1024px]]
 
 #### Significant Terms Aggregation<a name="st"></a>
 
@@ -86,14 +86,14 @@
 * 주요 옵션
     * Size : Bucket 몇 개 생성할 지 설정
 
-[[ images/bucket_agg_significant_terms.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/bucket/significant_terms.gif | height = 500px | width = 1024px]]
 
 #### Filters Aggregation<a name="fa"></a>
 
 * 역할 : [Query String](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html)으로 작성한 조건 만족하는 Bucket 생성
 * Date Type : *
 
-[[ images/bucket_agg_filters.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/bucket/filters.gif | height = 500px | width = 1024px]]
 
 #### Geo Hash Aggregation<a name="gh"></a>
 
@@ -102,7 +102,7 @@
 * 주요 옵션
     * Precision : Centroid에서 얼마나 가까이/멀리까지 묶을지 설정 (작으면 많이 묶인다)
 
-[[ images/bucket_agg_geo_hash.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/bucket/geo_hash.gif | height = 500px | width = 1024px]]
 
 #### IPv4 Aggregation<a name="ip"></a>
 
@@ -115,4 +115,4 @@
     * Use CIDR Masks
         * Mask : CIDR mask 설정
 
-[[ images/bucket_agg_ipv4.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/bucket/ipv4.gif | height = 500px | width = 1024px]]

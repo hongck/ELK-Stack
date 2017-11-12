@@ -37,7 +37,6 @@
 ### 기본함수
 #### `.es()` <a name="es"></a>
 
-
 모든 index의 모든 document의 개수를 y축으로 갖고, `@timestamp`를 x축으로 갖는 그래프가 생성된다
 
 | argument|  설명  | 예시| 의미 |
@@ -49,12 +48,11 @@
 | offset | 설정한 시간만큼 전의 값을 표시 <br /> (형식: 1h, 1d, 1w, 1M, 1y)  | `.es(offset=-1M)`| 한 달 전 값을 표시|
 | split | .es()를 조건에 맞게 분할  | `.es(split=name:3)`| 기존 .es()를 `name`을 기준으로 3개로 분할|
 
-[[ images/timelion_es.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/es.png | height = 500px | width = 1024px]]
 
 ---
 ### 조건함수
 #### `.es()` <a name="if"></a>
-
 
 .es()의 각 point를 설정한 조건과 비교하여 참(거짓)일 경우 설정한 값을 반환한다
 
@@ -65,7 +63,7 @@
 | then | 조건이 참일 경우 표시할 값  | `.es().if(gt, 5, 10, 0)` | .es() 값이 5보다 크면 10으로, 작으면 0으로 설정|
 | else | 조건이 거짓일 경우 표시할 값  | `.es().if(gt, 5, 10, 0)` | .es() 값이 5보다 크면 10으로, 작으면 0으로 설정 |
 
-[[ images/timelion_if.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/if.png | height = 500px | width = 1024px]]
 
 ---
 ### 수학함수
@@ -77,7 +75,7 @@
 | ------------- |------------| -----| ----- |
 | multiplier	| 곱할 값 | `.es().multiply(10)` <br /> `.es().multiply(.es())` | .es() * 10 <br /> .es() * .es()
 
-[[ images/timelion_multiply.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/multiply.png | height = 500px | width = 1024px]]
 
 #### `.es().divide()`<a name="div"></a>
 
@@ -87,7 +85,7 @@
 | ------------- |------------| -----| ----- |
 | divisor	| 나눌 값 | `.es().divide(10)` <br /> `.es().divide(.es())` | .es() / 10 <br /> .es() / .es()
 
-[[ images/timelion_divide.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/divide.png | height = 500px | width = 1024px]]
 
 #### `.es().subtract()`<a name="sub"></a>
 
@@ -97,7 +95,7 @@
 | ------------- |------------| -----| ----- |
 | term	| 뺄 값| `.es().subtrat(10)` <br /> `.es().subtract(.es())` | .es() - 10 <br /> .es() - .es()
 
-[[ images/timelion_subtract.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/subtract.png | height = 500px | width = 1024px]]
 
 #### `.es().sum()`<a name="sum"></a>
 
@@ -107,13 +105,13 @@
 | ------------- |------------| -----| ----- |
 | term	| 더할 값| `.es().sum(10)` <br /> `.es().sum(.es())` | .es() + 10 <br /> .es() + .es()
 
-[[ images/timelion_sum.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/sum.png | height = 500px | width = 1024px]]
 
 #### `.es().abs()`<a name="abs"></a>
 
 .es() 값에 절대값을 취한다
 
-[[ images/timelion_abs.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/abs.png | height = 500px | width = 1024px]]
 
 #### `.es().log()`<a name="log"></a>
 
@@ -123,7 +121,7 @@
 | ------------- |------------| -----| ----- |
 | base	| 밑| `.es().log(10)` | .es() 각 point에 밑이 10인 로그를 취한다
 
-[[ images/timelion_log.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/log.png | height = 500px | width = 1024px]]
 
 #### `.es().max()`<a name="max"></a>
 
@@ -133,7 +131,7 @@
 | ------------- |------------| -----| ----- |
 | value	| 비교값 | `.es().max(10)` <br /> `.es().max(.es(q=s:a))` | .es()와 10 중 큰 값 표시 <br /> .es()와 .es(q=s:a) 중 큰 값 표시
 
-[[ images/timelion_max.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/max.png | height = 500px | width = 1024px]]
 
 #### `.es().min()`<a name="min"></a>
 
@@ -143,7 +141,7 @@
 | ------------- |----------| -----| ----- |
 | value	| 비교값 | `.es().min(10)` <br /> `.es().min(.es(q=s:a))` | .es()와 10 중 작은 값 표시 <br /> .es()와 .es(q=s:a) 중 작은 값 표시
 
-[[ images/timelion_min.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/min.png | height = 500px | width = 1024px]]
 
 #### `.static()`<a name="static"></a>
 
@@ -153,19 +151,19 @@
 | ------------- |------------| -----| ----- |
 | value	| 표시할 값 | `.static(10)` | y=10인 상수함수 생성
 
-[[ images/timelion_static.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/static.png | height = 500px | width = 1024px]]
 
 #### `.es().cusum()`<a name="cusum"></a>
 
 .es()의 누적합을 구한다
 
-[[ images/timelion_cusum.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/cusum.png | height = 500px | width = 1024px]]
 
 #### `.es().derivative()`<a name="derivative"></a>
 
 .es()와 .es()의 이전 값과의 차를 구한다
 
-[[ images/timelion_derivative.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/derivative.png | height = 500px | width = 1024px]]
 
 #### `.es().movingaverage()`<a name="mvavg"></a>
 
@@ -176,7 +174,7 @@
 | window | 구간 | `.es().movingaverage(10)` | .es()의 10개 point 마다 평균 계산
 | position | 위치 (left, right, center)| `.es().movingaverage(left, 10)` | 특정 point 기준 왼쪽 10개씩 평균 계산
 
-[[ images/timelion_movingaverage.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/moving_average.png | height = 500px | width = 1024px]]
 
 #### `.es().scale_interval()`<a name="si"></a>
 
@@ -186,7 +184,7 @@
 | ------------- |----------| -----| ----- |
 | interval | 조정하려는 시간 단위 <br />(1s, 1m, 1h, 1M, 1w, 1y) | `.es().scale_interval(1h)` | .es()의 값을 1h 기준으로 조정해서 표시 <br /> 예) default가 daily라면 24로 나눈 값이 표시
 
-[[ images/timelion_scale_interval.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/scale_interval.png | height = 500px | width = 1024px]]
 
 #### `.es().range()`<a name="rg"></a>
 
@@ -197,7 +195,7 @@
 | min | 최소값 | `.es().range(1, 10)` | .es()의 값을 1~10 사이 값으로 조정
 | max | 최대값 | `.es().range(1, 10)` | .es()의 값을 1~10 사이 값으로 조정
 
-[[ images/timelion_range.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/range.png | height = 500px | width = 1024px]]
 
 ---
 
@@ -210,7 +208,7 @@
 | ------------- |------------| -----| ----- |
 | width | 굵기 | `.es().bars(5)` | .es()를 막대 그래프로 나타내고 굵기는 5로 설정
 
-[[ images/timelion_bars.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/bars.png | height = 500px | width = 1024px]]
 
 #### `.es().lines()`<a name="ln"></a>
 
@@ -221,7 +219,7 @@
 | width | 굵기 | `.es().lines(width=5)` | .es()를 라인 그래프로 나타내고 굵기는 5로 설정
 | fill | 농도 | `.es().lines(fill=5)` | .es()의 라인 아래 면적을 농도 5만큼 채우기 (0: 투명, 10: 불투명 ) 
 
-[[ images/timelion_lines.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/lines.png | height = 500px | width = 1024px]]
 
 #### `.es().points()`<a name="poi"></a>
 
@@ -235,19 +233,19 @@
 | fillColor | 내부 색깔 | `.es().points(fillColor=red)` | .es()의 점 색깔을 red로 설정
 | symbol | 모양 (cross, circle, triangle, square, diamond) | `.es().points(symbol=cross)` | .es()의 점 모양을 cross로 설정
 
-[[ images/timelion_points.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/points.png | height = 500px | width = 1024px]]
 
 #### `.es().label()`<a name="lb"></a>
 
 legend에 각 .es()를 나타낼 이름을 정한다
 
-[[ images/timelion_label.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/label.png | height = 500px | width = 1024px]]
 
 #### `.es().color()`<a name="cl"></a>
 
 .es()를 나타낼 색깔을 정한다
 
-[[ images/timelion_color.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/color.png | height = 500px | width = 1024px]]
 
 #### `.es().yaxis()`<a name="yaxis"></a>
 
@@ -262,7 +260,7 @@ legend에 각 .es()를 나타낼 이름을 정한다
 | color | 축 색깔| `.es().yaxis(label=hello, color=red)` | y축의 이름을 hello로 하고 빨간색으로 표시
 | position | 위치 (left, right) | `.es().yaxis(position)` | y축을 왼쪽에 표시
 
-[[ images/timelion_yaxis.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/yaxis.png | height = 500px | width = 1024px]]
 
 #### `.es().title()`<a name="title"></a>
 
@@ -272,7 +270,7 @@ legend에 각 .es()를 나타낼 이름을 정한다
 | ------------- |------------| -----| ----- |
 | title | 제목 | `.es().title(title='hello world')` | `title`에 hello world 출력
 
-[[ images/timelion_title.png | height = 500px | width = 1024px]]
+[[ images/visualize/timelion/title.png | height = 500px | width = 1024px]]
 
 ### source
 * [timelion github](https://github.com/elastic/timelion/blob/master/FUNCTIONS.md)

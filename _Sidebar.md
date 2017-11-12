@@ -6,7 +6,7 @@
        * [Bucket Agg](https://github.com/higee/elastic/wiki/Bucket-Agg)
        * [Metric Agg](https://github.com/higee/elastic/wiki/Metric-Agg)
        * [Parent Pipeline Agg](https://github.com/higee/elastic/wiki/Parent-Pipeline-Agg)
-       * [Sibling Agg](https://github.com/higee/elastic/wiki/Sibling-Pipeline-Agg)
+       * [Sibling Pipeline Agg](https://github.com/higee/elastic/wiki/Sibling-Pipeline-Agg)
 
 **Logstash**
 
@@ -21,10 +21,10 @@
    * 기본 Workflow
         * [Index 등록](https://github.com/higee/elastic/wiki/index-%EB%93%B1%EB%A1%9D)
         * [데이터 탐색](https://github.com/higee/elastic/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%90%EC%83%89)
-        * [데이터 시각화]
+        * 데이터 시각화
+            * [Timelion](https://github.com/higee/elastic/wiki/Timelion)
+            * [Region Map (Korea)](https://github.com/higee/elastic/wiki/Region-Map-(Korea))
         * [대시보드 제작]
-   * Visualize
-        * [timelion](https://github.com/higee/elastic/wiki/Timelion)
    * 추가 기능
         * [데이터 검색 및 필터]
         * [필드 관리]
