@@ -13,7 +13,7 @@
     * 특정 elasticsearch index만 보고 싶을 때 : 정확히 index 이름 입력
    
        [[ images/management_configure-an-index-pattern.png | height = 500px | width = 1024px]]
-    * 복수개의 elasticsearch index를 보고 싶을 때 : wildcard를 적절히 이용해서 입력 (자세히는 [elastic 참조](https://www.elastic.co/guide/en/kibana/current/index-patterns.html))
+    * 복수개의 elasticsearch index를 보고 싶을 때 : wildcard를 적절히 이용해서 입력
   
        [[ images/management_configure-index-patterns.png | height = 500px | width = 1024px]]
 * `Time Filter field name`
