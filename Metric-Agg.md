@@ -28,7 +28,7 @@
 
 * 역할 : (aggregate된) documents 개수 반환
 
-[[ images/metric_agg_count.png | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/count.png | height = 500px | width = 1024px]]
 
 #### Avg Aggregation <a name="avg"></a>
 
@@ -36,7 +36,7 @@
 * 주요 옵션
     * Field : Avg Agg 적용할 Field 선택
 
-[[ images/metric_agg_avg.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/avg.gif | height = 500px | width = 1024px]]
 
 #### Sum Aggregation <a name="sum"></a>
 
@@ -44,7 +44,7 @@
 * 주요 옵션
     * Field : Sum Agg 적용할 Field 선택
 
-[[ images/metric_agg_sum.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/sum.gif | height = 500px | width = 1024px]]
 
 #### Min Aggregation <a name="min"></a>
 
@@ -52,7 +52,7 @@
 * 주요 옵션
     * Field : Min Agg 적용할 Field 선택
 
-[[ images/metric_agg_min.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/min.gif | height = 500px | width = 1024px]]
 
 #### Max Aggregation <a name="max"></a>
 
@@ -60,7 +60,7 @@
 * 주요 옵션
     * Field : Max Agg 적용할 Field 선택
 
-[[ images/metric_agg_max.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/max.gif | height = 500px | width = 1024px]]
 
 #### Extended Stats Aggregation <a name="es"></a>
 
@@ -68,7 +68,7 @@
 * 주요 옵션
     * Field : Extended Agg 적용할 Field 선택
 
-[[ images/metric_agg_std.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/std.gif | height = 500px | width = 1024px]]
 
 #### Cardinality Aggregation <a name="cd"></a>
 
@@ -76,7 +76,7 @@
 * 주요 옵션
     * Field : Cardinality Agg 적용할 Field 선택
 
-[[ images/metric_agg_cardinality.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/cardinality.gif | height = 500px | width = 1024px]]
 
 #### Percentiles Aggregation <a name="pa"></a>
 
@@ -85,7 +85,7 @@
     * Field : Percentiles Agg을 적용할 Field 선택 
     * Percents : 백분위 값
 
-[[ images/metric_agg_percentiles.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/percentiles.gif | height = 500px | width = 1024px]]
 
 #### Percentile Ranks Aggregation <a name="pr"></a>
 
@@ -94,7 +94,7 @@
     * Field : Percentile Ranks Agg을 적용할 Field 선택 
     * Values : 백분위수
 
-[[ images/metric_agg_percentile_ranks.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/percentile_ranks.gif | height = 500px | width = 1024px]]
 
 #### Top Hits Aggregation <a name="th"></a>
 
@@ -106,5 +106,6 @@
     * Sort On : Field 값들을 어떻게 정렬할 것인지 기준 설정
     * Order : Sort On된 결과를 오름차순 또는 내림차순으로 정렬
 
-[[ images/metric_agg_top_hit_1.gif | height = 500px | width = 1024px]]
-[[ images/metric_agg_top_hit_2.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/metric/top_hit_1.gif | height = 500px | width = 1024px]]
+
+[[ images/aggregation/metric/top_hit_2.gif | height = 500px | width = 1024px]]
