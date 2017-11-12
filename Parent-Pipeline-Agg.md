@@ -55,4 +55,4 @@
         * Aggregation : 적용할 Agg 종류 선택
         * Field : Agg 적용할 Field 선택
 
-[[ images/aggregation/parent/seiral_diff.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/parent/serial_diff.gif | height = 500px | width = 1024px]]
