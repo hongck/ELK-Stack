@@ -24,7 +24,7 @@
         * Aggregation : 적용할 Agg 종류 선택
         * Field : Agg 적용할 Field 선택
 
-[[ images/pp_agg_derivative.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/parent/derivative.gif | height = 500px | width = 1024px]]
 
 #### Cumulative Sum Aggregation <a name="cusum"></a>
 
@@ -35,7 +35,7 @@
         * Field : Agg 적용할 Field 선택
 
 
-[[ images/pp_agg_cusum.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/parent/cusum.gif | height = 500px | width = 1024px]]
 
 #### Moving Avg Aggregation <a name="mvavg"></a>
 
@@ -45,7 +45,7 @@
         * Aggregation : 적용할 Agg 종류 선택
         * Field : Agg 적용할 Field 선택
 
-[[ images/pp_agg_mvavg.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/parent/mvavg.gif | height = 500px | width = 1024px]]
 
 #### Serial Diff Aggregation <a name="sd"></a>
 
@@ -55,4 +55,4 @@
         * Aggregation : 적용할 Agg 종류 선택
         * Field : Agg 적용할 Field 선택
 
-[[ images/pp_agg_seiral_diff.gif | height = 500px | width = 1024px]]
+[[ images/aggregation/parent/seiral_diff.gif | height = 500px | width = 1024px]]
