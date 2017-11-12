@@ -1,4 +1,4 @@
-[[ images/region_map.gif | height = 500px | width = 1024px]]
+[[ images/visualize/region_map/main.gif | height = 500px | width = 1024px]]
 
 ### 순서
 
@@ -17,7 +17,7 @@
 * 인터넷에서 쉽게 찾을 수 있으며 이번에는 [통계청 자료](https://github.com/southkorea/southkorea-maps/blob/master/kostat/2013/json/skorea_provinces_geo_simple.json)를 사용했다. 
 * 대략 이렇게 생겼다. Geo Json 파일 내 한글 행정권역명을 사용할 경우 encoding에 주의해야 한다
 
-[[ images/region_map_geo_json.png | height = 300px | width = 1024px]]
+[[ images/visualize/region_map/geo_json.png | height = 300px | width = 1024px]]
 
 #### CORS 활성화된 서버에 Geo Json 띄우기<a name="cors"></a>
 
@@ -90,7 +90,8 @@
             * (layer 아래) name : Kibana Region Map에서 Vector Map 선택지에 표시되는 이름
             * url : Geo Json이 올라간 곳의 url로 아래 이미지의 링크 부분을 입력하면 된다
 
-[[ images/region_map_kibana_yml.png | height = 500px | width = 1024px]]
+[[ images/visualize/region_map/kibana_yml.png | height = 500px | width = 1024px]]
+
             * (field 아래) name : Geo Json 파일에서 `서울특별시`, `제주특별자치도` 등의 값을 담고 있는 field 이름으로 위의 이미지에서 보면 name으로 되어 있기에 여기도 name으로 써줘야 한다
             * (field 아래) description : Kibana Region Map에서 Join Field에 표시되는 이름
 
@@ -126,16 +127,16 @@
 
 * Visualize에서 Region Map 선택
 
-[[ images/region_map_home.png | height = 500px | width = 1024px]]
+[[ images/visualize/region_map/home.png | height = 500px | width = 1024px]]
 
 * Options 설정
     * Layer Settings에서 Vector map과 Join field가 맞게 설정되었는지 확인한다
 
-    [[ images/region_map_options.png | height = 500px | width = 1024px]]
+    [[ images/visualize/region_map/options.png | height = 500px | width = 1024px]]
 
 * Data 설정
     * buckets에서 Shape Field를 고른다
     * 이 때 Shape Field란 위의 예에서 보면 "서울특별시", "경상남도" 등의 값을 담고 있는 `고객주소_시도`가 된다.
     * 위의 Metric/Sibling Pipeline Aggregation은 기호에 맞게 설정한다
 
-    [[ images/region_map_data.png | height = 500px | width = 1024px]]
+    [[ images/visualize/region_map/data.png | height = 500px | width = 1024px]]
