@@ -9,7 +9,7 @@
 
 ### 목록
 
-* [기본함수 - `.es`](#es)
+* [기본함수 - `.es()`](#es)
 * [조건함수 - `.es().if()`](#if)
 * [수학함수 - `.es().multiply()`](#mul)
 * [수학함수 - `.es().divide()`](#div)
@@ -41,12 +41,12 @@
 
 | argument|  설명  | 예시| 의미 |
 | ------- |-------|----|---|
-| index  | index 선택 | `.es(index=hello)` | `hello`라는 index 사용 |
-| q      | document 선택 [(문법)](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax) | `.es(q=name:higee)`| `name`이 higee인 document 사용
-| timefield | timefield 선택 (timelion x축) | `.es(timefield=newdate)` | `newdate` field를 tiemfield(x축)으로 사용 |
-| metric | aggregation 선택 (timelion y축)  | `.es(metric=sum:price)`| `price` field의 sum 값을 y축에 표시 |
+| index  | index 선택 | `.es(index=shopping)` | `shopping`라는 index 사용 |
+| q      | document 선택 [(문법)](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax) | `.es(q=고객성별:여성)`| `고객성별이`이 여성인 document 사용
+| timefield | timefield 선택 (timelion x축) | `.es(timefield=주문시간)` | `주문시간` field를 tiemfield(x축)으로 사용 |
+| metric | aggregation 선택 (timelion y축)  | `.es(metric=sum:상품가격)`| `price` field의 sum 값을 y축에 표시 |
 | offset | 설정한 시간만큼 전의 값을 표시 <br /> (형식: 1h, 1d, 1w, 1M, 1y)  | `.es(offset=-1M)`| 한 달 전 값을 표시|
-| split | .es()를 조건에 맞게 분할  | `.es(split=name:3)`| 기존 .es()를 `name`을 기준으로 3개로 분할|
+| split | .es()를 조건에 맞게 분할  | `.es(split=상품분류:3)`| 기존 .es()를 `상품분류`을 기준으로 3개로 분할|
 
 [[ images/visualize/timelion/es.png | height = 500px | width = 1024px]]
 
@@ -58,7 +58,7 @@
 
 | argument      |  설명          |  예시 | 의미 |
 | ------------- |------------| -----| ----- |
-| operator| eq, ne, gt(e), lt(e) | `.es().if(gt, 5, 10, 0)` <br/> `.es.().if(eq, .es(q=s:a), 1, 0)` | .es() 값이 5보다 크면 10으로, 작으면 0으로 설정  <br/> .es() 값이 .es(q=s:a)과 같으면 1, 다르면 0으로 설정 |
+| operator| eq, ne, gt(e), lt(e) | `.es().if(gt, 5, 10, 0)` <br/> `.es.().if(lt, .es(q=고객성별:여성), 1, 0)` | .es() 값이 5보다 크면 10으로, 작으면 0으로 설정  <br/> .es() 값이 .es(q=고객성별:여성)보다 작으면 1, 크면 0으로 설정 |
 | if | 비교할 값 | `.es().if(gt, 5, 10, 0)` | .es() 값이 5보다 크면 10으로, 작으면 0으로 설정 |
 | then | 조건이 참일 경우 표시할 값  | `.es().if(gt, 5, 10, 0)` | .es() 값이 5보다 크면 10으로, 작으면 0으로 설정|
 | else | 조건이 거짓일 경우 표시할 값  | `.es().if(gt, 5, 10, 0)` | .es() 값이 5보다 크면 10으로, 작으면 0으로 설정 |
