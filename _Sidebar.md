@@ -24,7 +24,7 @@
         * [데이터 시각화](https://github.com/higee/elastic/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%8B%9C%EA%B0%81%ED%99%94)
             * [Timelion](https://github.com/higee/elastic/wiki/Timelion)
             * [Region Map (Korea)](https://github.com/higee/elastic/wiki/Region-Map-(Korea))
-        * 대시보드 제작
+        * [대시보드 제작](https://github.com/higee/elastic/wiki/%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EC%A0%9C%EC%9E%91)
    * 추가 기능
         * 데이터 검색 및 필터
         * 필드 관리
