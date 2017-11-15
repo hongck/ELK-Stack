@@ -33,6 +33,11 @@
 * [스타일함수 - `.es().yaxis()`](#yaxis)
 * [스타일함수 - `.es().title()`](#title)
 
+### 예제
+
+* [전년 대비 매출이 50,000 이상 상승 구간 하이라이트](#ex1)
+* [매출 7일 이동평균선 대비 14일 이동평균선이 1보다 큰 구간 하이라이트](#ex2)
+
 ---
 ### 기본함수
 #### `.es()` <a name="es"></a>
@@ -271,6 +276,32 @@ legend에 각 .es()를 나타낼 이름을 정한다
 | title | 제목 | `.es().title(title='hello world')` | `title`에 hello world 출력
 
 [[ images/visualize/timelion/title.png | height = 500px | width = 1024px]]
+
+---
+
+### 예제
+
+<a name='ex1'></a>
+전년 대비 매출이 50,000 이상 상승 구간 하이라이트
+
+[[ images/visualize/timelion/ex1.png | height = 500px | width = 1024px]]
+
+```
+.es(metric=sum:상품가격).label('올해 매출 (=상품가격의 합)'),  
+.es(metric=sum:상품가격, offset=-1y).label('작년 매출').color(#00b8ff), 
+.es(metric=sum:상품가격).subtract(.es(metric=sum:상품가격, offset=-1y)).if(gte, 50000, .es(metric=sum:상품가격), null).lines(fill=5, width=2).color(#fd8282).label('전년 대비 50,000 이상 상승 구간').yaxis(label=매출)
+```
+
+
+<a name='ex2'></a>
+매출 7일 이동평균선 대비 14일 이동평균선이 1보다 큰 구간 하이라이트
+
+[[ images/visualize/timelion/ex2.png | height = 500px | width = 1024px]]
+
+```
+.es(metric=sum:상품가격).movingaverage(7).divide(.es(metric=sum:상품가격).movingaverage(14)).label('매출 7일 이동평균선 대비 14일 이동평균선').color('#00ccff'),  
+.es(metric=sum:상품가격).movingaverage(7).divide(.es(metric=sum:상품가격).movingaverage(14)).if(gte, 1.0, .es(metric=sum:상품가격).movingaverage(7).divide(.es(metric=sum:상품가격).movingaverage(14)), null).lines(fill=3).label('1.0보다 큰 경우').color('#fb8cb5')
+```
 
 ### source
 * [timelion github](https://github.com/elastic/timelion/blob/master/FUNCTIONS.md)
