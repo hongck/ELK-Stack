@@ -25,6 +25,7 @@
 * [수학함수 - `.es().movingaverage()`](#mvavg)
 * [수학함수 - `.es().scale_interval()`](#si)
 * [수학함수 - `.es().range()`](#rg)
+* [수학함수 - `.es().trend()`](#trend) 
 * [스타일함수 - `.es().bars()`](#bar)
 * [스타일함수 - `.es().lines()`](#ln)
 * [스타일함수 - `.es().points()`](#poi)
@@ -201,6 +202,18 @@
 | max | 최대값 | `.es().range(1, 10)` | .es()의 값을 1~10 사이 값으로 조정
 
 [[ images/visualize/timelion/range.png | height = 500px | width = 1024px]]
+
+#### `.es().trend()`<a name="trend"></a>
+
+.es()의 추세선을 그려준다.
+
+| argument      |  설명       |  예시 | 의미 |
+| ------------- |------------| -----| ----- |
+| mode | 어떤 방식으로 추세선 그릴 지 서택 `linear(선형)`, `log` | `.es().trend(mode=linear)` | .es()의 선형 추세선을 그린다
+| start | 추세선 작성을 위해 사용할 데이터의 시작점 정의 | `.es().trend(start=5)` <br> `.es().trend(start=-5)`| 처음 15번째 데이터부터 반영 <br> 뒤에서 15번째 데이터부터 반영
+| end | 추세선 작성을 위해 사용할 데이터의 끝점 정의 | `.es().trend(end=5)` <br> `.es().trend(end=-5)`| 처음 5번째 데이터까지 반영 <br> 뒤에서 5번째 데이터까지 반영
+
+[[ images/visualize/timelion/trend.png | height = 500px | width = 1024px]]
 
 ---
 
