@@ -8,7 +8,7 @@
 <a name='from_visualization'></a>
 ### Visualize에서 수정
 
-[[ images/visualize/from_visualize.gif | height = 500px | width = 1024px]]
+[[ images/visualize/edit/from_visualize.gif | height = 500px | width = 1024px]]
 
 * 수정하려는 visualization 선택
 * visualization 수정
@@ -21,7 +21,7 @@
 <a name='from_dashboard'></a>
 ### Dashboard에서 수정
 
-[[ images/visualize/from_dashboard.gif | height = 500px | width = 1024px]]
+[[ images/visualize/edit/from_dashboard.gif | height = 500px | width = 1024px]]
 
 * 수정하려는 visualization이 있는 dashboard 선택
 * 선택한 dashboard 페이지 우측상단의 edit 선택
