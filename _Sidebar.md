@@ -29,7 +29,7 @@
         * [Visualization 수정](https://github.com/higee/elastic/wiki/Visualization-%EC%88%98%EC%A0%95)
         * 데이터 검색 및 필터
         * 필드 관리
-        * 스크립트 필드
+        * [Scripted Field](https://github.com/higee/elastic/wiki/Scripted-Field)
         * [Query 방법](https://github.com/higee/elastic/wiki/%ED%82%A4%EB%B0%94%EB%82%98-%EC%A7%88%EC%9D%98-%EB%A7%81%ED%81%AC-%EB%AA%A8%EC%9D%8C)
 
 **기타**
