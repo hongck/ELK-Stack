@@ -39,8 +39,8 @@
 #### Field Match 검색
 
 * 기능 : 특정 Field의 Value가 검색어와 일치하는 Documents 검색
-* 예시 : `상품분류:셔츠` 
-* 예시 설명 : `상품분류` Field의 Value가 `셔츠`인 Documents 찾기
+* 예시 : `배송메모:부재중` 
+* 예시 설명 : `배송메모` Field의 Value가 `부재중`인 Documents 찾기
 
 [[ images/search/field_match.png | height = 500px | width = 1024px]]
 
@@ -55,7 +55,7 @@
     * `배송메모` Field의 Value가 정확히 `상품 이상`인 Documents 찾기
     * 큰 따옴표 없이 검색할 경우 `배송메모`가 `상품` 또는 `이상`인 Documents를 찾게된다.
 
-[[ images/search/field_match.png | height = 500px | width = 1024px]]
+[[ images/search/exact_field_match.png | height = 500px | width = 1024px]]
 
 <a name='must_be_present'></a>
 #### Must be present 검색
@@ -221,9 +221,9 @@
     * 임의의 Field Value가 `서`로 시작하고 `특별시`로 끝나는 5글자인 모든 Documents 찾기 (서울특별시)
     * `구매사이트` Field Value가 `쿠`로 시작하는 2글자인 모든 Documents 찾기 (쿠팡)
 
-[[ images/search/wildcard_?_keyword.png | height = 500px | width = 1024px]]
+[[ images/search/wildcard_keyword.png | height = 500px | width = 1024px]]
 
-[[ images/search/wildcard_?_field.png | height = 500px | width = 1024px]]
+[[ images/search/wildcard_field.png | height = 500px | width = 1024px]]
 
 <a name='wildcard_*'></a>
 #### Wildcard * 검색
