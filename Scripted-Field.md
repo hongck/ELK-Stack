@@ -46,7 +46,7 @@ Add Scripted Field 선택
 <a name='create_field'></a>
 Create Field 선택
 
-[[ images/management/create_field.png | height = 500px | width = 1024px]]
+[[ images/management/scripted_field_create_field.png | height = 500px | width = 1024px]]
 
 * Name : Scripted Field 이름 설정
 * Language : Painless 또는 (Lucene) Expression 선택
