@@ -27,7 +27,7 @@
         * [대시보드 제작](https://github.com/higee/elastic/wiki/%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EC%A0%9C%EC%9E%91)
    * 기타
         * [Visualization 수정](https://github.com/higee/elastic/wiki/Visualization-%EC%88%98%EC%A0%95)
-        * 데이터 검색 및 필터
+        * [Filtering by Field](https://github.com/higee/elastic/wiki/Filtering-by-Field)
         * 필드 관리
         * [Scripted Field](https://github.com/higee/elastic/wiki/Scripted-Field)
         * [Lucene Query Syntax](https://github.com/higee/elastic/wiki/Lucene-Query-Syntax)
