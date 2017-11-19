@@ -1,7 +1,7 @@
 ### 주의
 
 * scripted field는 검색이 안된다. 대신 필터로 사용해야 한다
-* 기본 operator는 OR 연산자다. 예를 들어 `서울 한국`으로 검색하면 `서울` 또는 `한국`이 존재하는 문서가 검색된다.
+* 기본 operator는 OR 연산자다. `서울 한국`으로 검색하면 `서울` 또는 `한국`이 존재하는 문서가 검색된다.
 * 텍스트 검색은 case sensitive하지 않다. 예를 들어 hello나 Hello나 같은 결과를 반환한다.
 * " " 내부의 단어는 정확한 일치를 원칙으로 하기에 "hello"와 "Hello"는 다르다
 * 구(phrase) 내에서는 wildcard를 사용할 수 없다.
@@ -222,6 +222,7 @@
     * `구매사이트` Field Value가 `쿠`로 시작하는 2글자인 모든 Documents 찾기 (쿠팡)
 
 [[ images/search/wildcard_?_keyword.png | height = 500px | width = 1024px]]
+
 [[ images/search/wildcard_?_field.png | height = 500px | width = 1024px]]
 
 <a name='wildcard_*'></a>
@@ -236,6 +237,7 @@
     * `상품분류` Field Value가 `가`로 시작하는 모든 Documents 찾기 (가디건)
 
 [[ images/search/wildcard_*_keyword.png | height = 500px | width = 1024px]]
+
 [[ images/search/wildcard_*_field.png | height = 500px | width = 1024px]]
 
 ---
