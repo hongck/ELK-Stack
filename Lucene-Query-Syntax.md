@@ -58,7 +58,7 @@
 [[ images/search/field_match.png | height = 500px | width = 1024px]]
 
 <a name='must_be_present'></a>
-### Must be present 검색
+#### Must be present 검색
 
 * 기능 : 특정 Field가 존재하는 Documents 찾기
 * 예시 : `_exists_:상품분류` 
@@ -67,7 +67,7 @@
 [[ images/search/must_be_present.png | height = 500px | width = 1024px]]
 
 <a name='must_not_be_present'></a>
-### Must not be present 검색
+#### Must not be present 검색
 
 * 기능 : 특정 Field가 존재하지 않는 Documents 찾기
 * 예시 : `_missing_:상품분류` 
@@ -76,7 +76,7 @@
 [[ images/search/must_not_be_present.png | height = 500px | width = 1024px]]
 
 <a name='and'></a>
-### AND 검색
+#### AND 검색
 
 * 기능 : 여러 조건을 동시에 만족하는 Documents 찾기
 * 예시
@@ -90,7 +90,7 @@
 [[ images/search/and_field.png | height = 500px | width = 1024px]]
 
 <a name='or'></a>
-### OR 검색
+#### OR 검색
 
 * 기능 : 여러 조건 중 최소 1개를 만족하는 Documents 찾기
 * 예시
@@ -104,7 +104,7 @@
 [[ images/search/or_field.png | height = 500px | width = 1024px]]
 
 <a name='not'></a>
-### NOT 검색
+#### NOT 검색
 
 * 기능 : 해당 조건을 제외한 Documents 찾기
 * 예시
@@ -118,7 +118,7 @@
 [[ images/search/not_field.png | height = 500px | width = 1024px]]
 
 <a name='grouping'></a>
-### Grouping 검색
+#### Grouping 검색
 
 * 기능 : 여러 조건을 만족하는 Documents 찾기
 * 예시
@@ -132,21 +132,7 @@
 [[ images/search/grouping_field.png | height = 500px | width = 1024px]]
 
 <a name='term'></a>
-### Term 검색
-
-* 기능 : 조건 중 적어도 하나라도 만족하는 Documents 찾기
-* 예시
-    * `(우리 니트)`
-    * `상품분류:(니트 코트)`
-* 예시 설명
-    * 임의의 Field의 Value가 `우리`거나 `니트`인 Documents 찾기
-    * `상품분류` Field의 Value가 `니트`거나 `코트`인 Documents 찾기
-
-[[ images/search/term_keyword.png | height = 500px | width = 1024px]]
-[[ images/search/term_field.png | height = 500px | width = 1024px]]
-
-<a name='term'></a>
-### Term 검색
+#### Term 검색
 
 * 기능 : 조건 중 적어도 하나라도 만족하는 Documents 찾기
 * 예시
@@ -160,7 +146,7 @@
 [[ images/search/term_field.png | height = 500px | width = 1024px]]
 
 <a name='fuzzy'></a>
-### Fuzzy 검색
+#### Fuzzy 검색
 
 * 기능
     * 검색어와 유사한 Value를 갖는 Documents 찾기 
@@ -183,7 +169,7 @@
 [[ images/search/fuzzy_field.png | height = 500px | width = 1024px]]
 
 <a name='proximity'></a>
-### Proximity 검색
+#### Proximity 검색
 
 * 기능 : 검색어의 순서를 변경해서 Documents 찾기
 * 예시
@@ -194,7 +180,7 @@
     * `배송메모` Field Value 중에서 `고객님이 안 받아요 전화를 계속`의 단어들의 순서를 최대 5번까지 바꾸는 과정에서 찾을 수 있는 Documents 찾기
  
 <a name='numeric_values'></a>
-### Numeric Values 검색
+#### Numeric Values 검색
 
 * 기능 : Numeric Field Value로 Documents 찾기
 * 예시
@@ -209,7 +195,7 @@
 [[ images/search/numeric_values.png | height = 500px | width = 1024px]]
 
 <a name='range'></a>
-### Range 검색
+#### Range 검색
 
 * 기능 : Field Value의 범위로 Documents 찾기
 * 예시
@@ -225,7 +211,7 @@
 [[ images/search/range_number.png | height = 500px | width = 1024px]]
 
 <a name='wildcard_?'></a>
-### Wildcard ? 검색
+#### Wildcard ? 검색
 
 * 기능 : Wildcard `?`를 사용하여 Documents 찾기
 * 예시
@@ -239,7 +225,7 @@
 [[ images/search/wildcard_?_field.png | height = 500px | width = 1024px]]
 
 <a name='wildcard_*'></a>
-### Wildcard * 검색
+#### Wildcard * 검색
 
 * 기능 : Wildcard `*`를 사용하여 Documents 찾기
 * 예시
