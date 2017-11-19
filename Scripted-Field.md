@@ -77,18 +77,20 @@ Create Field 선택
 * 적용 가능한 Field : Date
 * Language : expressions
 * 기본 Syntax 
+    * 편의상 `Field 이름`을 t라고 표시
+    * `doc['Field 이름'].date.year`와 `doc['t'].date.year는 같다
 
 | 선택할 날짜 단위  |  예시       |  설명 |  범위 |
 | ------------- |------------| -----| ----- |
-| year          |  `doc['Field 이름'].date.year` | 연도(year) 출력 | -292m - 292m |
-| month         |  `doc['Field 이름'].date.monthOfYear` | 몇 번째 달인지 출력 | 1-12 |
-| day         |  `doc['Field 이름'].date.dayOfYear` | (해당 년의) 몇 번째 날인지 출력  | 1-365 |
-| day         |  `doc['Field 이름'].date.dayOfMonth` | (해당 월의) 몇 번째 날인지 출력  | 1-31 |
-| day         |  `doc['Field 이름'].date.dayOfWeek` | (해당 주의) 몇 번째 날인지 출력  | 1-7 |
-| hour         |  `doc['Field 이름'].date.hourOfDay` | (하루 중) 몇 시간째인지 출력  | 0-23 |
-| minute         |  `doc['Field 이름'].date.minuteOfDay` | (하루 중) 몇 분째인지 출력  | 0-1439 |
-| minute         |  `doc['Field 이름'].date.minuteOfHour` | (한 시간 중) 몇 분째인지 출력 | 0-59 |
-| second         |  `doc['Field 이름'].date.secondOfDay` | (하루 중) 몇 초째인지 출력 | 0-86399 |
+| year          |  `doc['t'].date.year` | 연도(year) 출력 | -292m - 292m |
+| month         |  `doc['t'].date.monthOfYear` | 몇 번째 달인지 출력 | 1-12 |
+| day         |  `doc['t'].date.dayOfYear` | (해당 년의) 몇 번째 날인지 출력  | 1-365 |
+| day         |  `doc['t'].date.dayOfMonth` | (해당 월의) 몇 번째 날인지 출력  | 1-31 |
+| day         |  `doc['t'].date.dayOfWeek` | (해당 주의) 몇 번째 날인지 출력  | 1-7 |
+| hour         |  `doc['t'].date.hourOfDay` | (하루 중) 몇 시간째인지 출력  | 0-23 |
+| minute         |  `doc['t'].date.minuteOfDay` | (하루 중) 몇 분째인지 출력  | 0-1439 |
+| minute         |  `doc['t'].date.minuteOfHour` | (한 시간 중) 몇 분째인지 출력 | 0-59 |
+| second         |  `doc['t'].date.secondOfDay` | (하루 중) 몇 초째인지 출력 | 0-86399 |
 
 [[ images/management/scripted_field_date.png | height = 500px | width = 1024px]]
 
