@@ -12,10 +12,12 @@
     * [Scripted Fields 선택](#scripted_field)
     * [Add Scripted Field 선택](#add_scripted_field)
     * [양식에 맞게 설정 후 Create Field 선택](#create_field)
-* API
-    * [Numeric Field API](#numeric)
-    * [Date Field API](#date)
-    * [Geo Point Field API](#geo)
+* 종류
+    * [Numeric Field](#numeric)
+    * [Date Field](#date)
+    * [String Field](#string)
+    * [Geo Point Field](#geo)
+    * [Logic (조건)](#logic)
 
 ---
 
@@ -57,9 +59,10 @@ Create Field 선택
 ---
 
 <a name='numeric'></a>
-#### Numeric Field API
+#### Numeric Field
 
 * 적용 가능한 Field : Number
+* Return Type : Number
 * 기본 Syntax : doc['Field 이름'].value 
 * 사용 가능한 연산 Operator : +, -, *, /, % (나머지)
 * 예시 
@@ -72,9 +75,10 @@ Create Field 선택
 [[ images/management/scripted_field_numeric.png | height = 500px | width = 1024px]]
 
 <a name='date'></a>
-#### Date Field API
+#### Date Field
 
 * 적용 가능한 Field : Date
+* Return Type : Number
 * Language : expressions
 * 기본 Syntax 
     * 편의상 `Field 이름`을 t라고 표시
@@ -94,8 +98,19 @@ Create Field 선택
 
 [[ images/management/scripted_field_date.png | height = 500px | width = 1024px]]
 
+<a name='string'></a>
+#### String Field
+
+* 적용 가능한 Field : Number/String
+* Return Type : String
+* Language : painless
+* 예시
+    * 'Field 값은...' + doc['Field 이름'].value + '...입니다.'
+
+[[ images/management/scripted_field_string.png | height = 500px | width = 1024px]]
+
 <a name='geo'></a>
-### Geo Point Field API
+#### Geo Point Field
 
 * 적용 가능한 Field : Geo Point
 * Language : expressions
@@ -105,6 +120,28 @@ Create Field 선택
 * 응용
     * 출발점~도착점 거리 계산 (km)
     * `haversin(doc['출발점'].lat, doc['출발점'].lon, doc['도착점'].lat, doc['도착점'].lon)` 
+
+<a name='logic'></a>
+### Logic 조건
+
+* Language : Painless
+* Syntax 예시
+
+        if (doc['고객나이'].value < 20) { 
+            return "10대" 
+        } 
+        if (doc['고객나이'].value < 30) {
+            return "20대" 
+        } 
+        if (doc['고객나이'].value < 40) { 
+            return "30대" 
+        } 
+        if (doc['고객나이'].value < 50) {
+            return "40대" 
+        } 
+        return "50대 이상"
+
+[[ images/management/scripted_field_logic.png | height = 500px | width = 1024px]]
 
 ---
 
