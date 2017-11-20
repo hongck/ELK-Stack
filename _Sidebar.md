@@ -30,7 +30,8 @@
         * [Filtering by Field](https://github.com/higee/elastic/wiki/Filtering-by-Field)
         * [Scripted Field](https://github.com/higee/elastic/wiki/Scripted-Field)
         * [Manage Field](https://github.com/higee/elastic/wiki/Manage-Field)
-        * [Visualization 수정](https://github.com/higee/elastic/wiki/Visualization-%EC%88%98%EC%A0%95)
+        * [JSON Input](https://github.com/higee/elastic/wiki/JSON-Input)
+        * [Edit Visualization](https://github.com/higee/elastic/wiki/Visualization-%EC%88%98%EC%A0%95)
 
 **기타**
 
