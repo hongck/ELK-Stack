@@ -38,7 +38,7 @@
 
 * [전년 대비 매출이 50,000 이상 상승 구간 하이라이트](#ex1)
 * [매출 7일 이동평균선 대비 14일 이동평균선이 1보다 큰 구간 하이라이트](#ex2)
-
+* [평균 매출 추세선, 매출 5일 이동평균선, 평균 매출을 한 번에 그리기](#ex3)
 ---
 ### 기본함수
 #### `.es()` <a name="es"></a>
@@ -315,6 +315,18 @@ legend에 각 .es()를 나타낼 이름을 정한다
 .es(metric=sum:상품가격).movingaverage(7).divide(.es(metric=sum:상품가격).movingaverage(14)).label('매출 7일 이동평균선 대비 14일 이동평균선').color('#00ccff'),  
 .es(metric=sum:상품가격).movingaverage(7).divide(.es(metric=sum:상품가격).movingaverage(14)).if(gte, 1.0, .es(metric=sum:상품가격).movingaverage(7).divide(.es(metric=sum:상품가격).movingaverage(14)), null).lines(fill=3).label('1.0보다 큰 경우').color('#fb8cb5')
 ```
+
+<a name='ex3'></a>
+평균 매출 추세선, 평균 매출, 매출 5일 이동평균선 한 번에 그리기
+
+[[ images/visualize/timelion/ex3.png | height = 500px | width = 1024px]]
+
+```
+.es(metric=avg:상품가격).trend().label('평균 매출 추세선').color(#7EC327), 
+.es(metric=avg:상품가격).label('평균 매출').points().color(#cf5297), 
+.es(metric=avg:상품가격).movingaverage(5).label('매출 5일 이동평균').color(#5297cf)
+```
+
 
 ### source
 * [timelion github](https://github.com/elastic/timelion/blob/master/FUNCTIONS.md)
