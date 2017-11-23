@@ -295,7 +295,7 @@ legend에 각 .es()를 나타낼 이름을 정한다
 ### 예제
 
 <a name='ex1'></a>
-전년 대비 매출이 50,000 이상 상승 구간 하이라이트
+#### 전년 대비 매출이 50,000 이상 상승 구간 하이라이트
 
 [[ images/visualize/timelion/ex1.png | height = 500px | width = 1024px]]
 
@@ -307,7 +307,7 @@ legend에 각 .es()를 나타낼 이름을 정한다
 
 
 <a name='ex2'></a>
-매출 7일 이동평균선 대비 14일 이동평균선이 1보다 큰 구간 하이라이트
+#### 매출 7일 이동평균선 대비 14일 이동평균선이 1보다 큰 구간 하이라이트
 
 [[ images/visualize/timelion/ex2.png | height = 500px | width = 1024px]]
 
@@ -317,7 +317,7 @@ legend에 각 .es()를 나타낼 이름을 정한다
 ```
 
 <a name='ex3'></a>
-평균 매출 추세선, 평균 매출, 매출 5일 이동평균선 한 번에 그리기
+#### 평균 매출 추세선, 평균 매출, 매출 5일 이동평균선 한 번에 그리기
 
 [[ images/visualize/timelion/ex3.png | height = 500px | width = 1024px]]
 
