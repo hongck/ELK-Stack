@@ -259,7 +259,7 @@
 ### 예제
 
 <a name='ex-1'></a>
-전체 Documents 개수는?
+#### 전체 Documents 개수는?
 
 `*`
 
@@ -267,14 +267,14 @@
 
 
 <a name='ex-2'></a>
-고객성별이 여성인 Documents 개수는 ?
+#### 고객성별이 여성인 Documents 개수는 ?
 
 `고객성별 : 여성`
 
 [[ images/search/exercise/ex-2.png | height = 500px | width = 1024px]]
 
 <a name='ex-3'></a>
-결제카드가 우리 또는 국민인 Documents 개수는? 
+#### 결제카드가 우리 또는 국민인 Documents 개수는? 
 
 `결제카드 : (우리 국민)`
 
@@ -285,56 +285,56 @@
 [[ images/search/exercise/ex-3.2.png | height = 500px | width = 1024px]]
 
 <a name='ex-4'></a>
-결제카드가 우리 또는 국민이면서 고객나이가 30대인 Documents 개수는? 
+#### 결제카드가 우리 또는 국민이면서 고객나이가 30대인 Documents 개수는? 
 
 `결제카드 : (우리 국민) AND 고객나이 : [30 TO 39]`
 
 [[ images/search/exercise/ex-4.png | height = 500px | width = 1024px]]
 
 <a name='ex-5'></a>
-결제카드가 우리 또는 국민이면서 고객나이가 30대인이면서 고객주소_시도가 서울특별시가 아닌 Documents 개수는?
+#### 결제카드가 우리 또는 국민이면서 고객나이가 30대인이면서 고객주소_시도가 서울특별시가 아닌 Documents 개수는?
 
 `결제카드 : (우리 국민) AND 고객나이 : [30 TO 39] AND NOT 고객주소_시도 : 서울특별시`
 
 [[ images/search/exercise/ex-5.png | height = 500px | width = 1024px]]
 
 <a name='ex-6'></a>
-구매사이트가 쿠팡 또는 옥션이면서 고객성별이 여성이며 상품개수가 1~3인 Documents 개수는?
+#### 구매사이트가 쿠팡 또는 옥션이면서 고객성별이 여성이며 상품개수가 1~3인 Documents 개수는?
 
 `구매사이트 : (쿠팡 옥션) AND 고객성별 : 여성 AND 상품개수 : [1 TO 3]`
 
 [[ images/search/exercise/ex-6.png | height = 500px | width = 1024px]]
 
 <a name='ex-7'></a>
-상품개수가 0-2이거나 4-5인 Documents 개수는?
+#### 상품개수가 0-2이거나 4-5인 Documents 개수는?
 
 `상품개수 : [0 TO 2] OR 상품개수 : [4 TO 5]`
 
 [[ images/search/exercise/ex-7.png | height = 500px | width = 1024px]]
 
 <a name='ex-8'></a>
-고객성별이 남성이면서 20대이거나 고객성별이 여성이면서 30대인 Documents 개수는?
+#### 고객성별이 남성이면서 20대이거나 고객성별이 여성이면서 30대인 Documents 개수는?
 
 `(고객성별 : 남성 AND 고객나이 : [20 TO 29]) OR (고객성별 : 여성 AND 고객나이 : [30 TO 39])`
 
 [[ images/search/exercise/ex-8.png | height = 500px | width = 1024px]]
 
 <a name='ex-9'></a>
-구매사이트가 22번가(오타 아니에요)와 매우 비슷한 Documents 개수는?
+#### 구매사이트가 22번가(오타 아니에요)와 매우 비슷한 Documents 개수는?
 
 `구매사이트 : 22번가~2`
 
 [[ images/search/exercise/ex-9.png | height = 500px | width = 1024px]]
 
 <a name='ex-10'></a>
-고객주소_도시가 “경상”으로 시작하는 Documents 개수는?
+#### 고객주소_도시가 “경상”으로 시작하는 Documents 개수는?
 
 `고객주소_시도 : 경상*`
 
 [[ images/search/exercise/ex-10.png | height = 500px | width = 1024px]]
 
 <a name='ex-11'></a>
-상품분류가 “셔”로 시작하는 2글자인 Documents 개수는?
+#### 상품분류가 “셔”로 시작하는 2글자인 Documents 개수는?
 
 `상품분류 : 셔?`
 
