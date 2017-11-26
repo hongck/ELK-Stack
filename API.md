@@ -27,7 +27,10 @@
          * [ID로 수정](#update_doc_id)
          * [ID로 조건부 수정](#upsert_doc_id)
          * [Query로 수정](#update_doc_query)
-    * [Documetns 복사](#reindex)
+    * Documetns 복사
+         * [Index 전체 복사](#reindex_full)
+         * [Index 일부 복사](#reindex_partial)
+         * [외부 Index 복사](#reindex_remote)
 
 ---
 
@@ -325,7 +328,7 @@ POST test_index/type_type/3/_update
 
 [[ images/api/document/upsert_doc_id.png | height = 500px | width = 1024px]]
 
-<a name='update_doc_query')</a>
+<a name='update_doc_query'></a>
 #### [Query로 Document 수정](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update-by-query.html)
 * 형식 (term query 예시)
 ```
@@ -360,10 +363,115 @@ POST test_index/test_type/_update_by_query
 [[ images/api/document/update_doc_query.png | height = 500px | width = 1024px]]
 
 
-<a name='reindex')</a>
 #### [Document 복사](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html)
 * 복사하려는 Index에 Mapping을 먼저 해두기를 권장
+<a name='reindex_full')</a>
 * 전체 Documents 복사
     * 형식
     ```
+    POST _reindex
+    {
+      "source": {
+        "index": "{복사하려는 원본 Index 이름}"
+      },
+      "dest": {
+        "index": "{복사본을 저장할 Index 이름}"
+      }
+    }
     ```
+    * 예시
+    ```
+    POST _reindex
+    {
+      "source": {
+        "index": "test_index"
+      },
+      "dest": {
+        "index": "test_index_2"
+      }
+    }
+    ```
+    [[ images/api/document/reindex_full.png | height = 500px | width = 1024px]]
+
+<a name='reindex_partial'></a>
+* 일부 Documents 복사
+    * 형식
+    ```
+    POST _reindex
+    {
+      "source": {
+        "index": "{복사하려는 Index 이름}",
+        "type" : "{복사하려는 Type 이름}",
+        "query": {
+          "term": {
+            "{Field 이름}": "{Value}"
+          }
+        }
+      },
+      "dest": {
+        "index": "{복사본을 저장할 Index 이름}"
+      }
+    }
+    ```
+    * 예시
+    ```
+    POST _reindex
+    {
+      "source": {
+        "index": "test_index",
+        "type" : "test_type",
+        "query": {
+          "term": {
+            "상품": "아이폰"
+          }
+        }
+      },
+      "dest": {
+        "index": "test_index_3"
+      }
+    }
+    ```
+    [[ images/api/document/reindex_partial.png | height = 500px | width = 1024px]]
+
+<a name='reindex_remote'></a>
+#### 외부에 있는 Elasticsearch Index 복사
+
+* 형식
+```
+POST _reindex
+{
+  "source": {
+    "remote": {
+      "host": "{Elasticsearch url}",
+      "username": "{유저 이름}",
+      "password": "{비밀번호}"
+    },
+    "index": "{복사할 Index 이름}",
+  },
+  "dest": {
+    "index": "{복사본을 저장할 Index 이름}"
+  }
+}
+```
+* 예시
+```
+POST _reindex
+{
+  "source": {
+    "remote": {
+      "host": "http://otherhost:9200",
+      "username": "user",
+      "password": "pass"
+    },
+    "index": "source",
+    "query": {
+      "match": {
+        "test": "data"
+      }
+    }
+  },
+  "dest": {
+    "index": "dest"
+  }
+}
+```
