@@ -14,8 +14,12 @@
     * [Elasticsearch 환경설정](#configure_elasticsearch)
         * [Bootstarp Checks](#bootstrap)
         * [JVM Options](#jvm)
+        * [Network](#elasticsearch_network)
     * [Kibana 환경설정](#configure_elasticsearch)
-
+        * [Network[(#kibana_network)
+* 구동
+    * [Elasticsearch 시작](#start_elasticsearch)
+    * [Kibana 시작](#start_kibana)
 ---
 
 <a name='java'></a>
@@ -182,8 +186,84 @@ $ cd fc
 <a name='jvm'></a>
 #### JVM Options
 
-* 테스트 환경에서 Free Tier EC2 Instance를 선택했기에  
+* 설명
+    * 테스트 환경에서 Free Tier EC2 Instance를 선택했기에 JVM의 Heat Size를 줄여줘야 한다
+    * 넉넉한 EC2 Instance를 선택했다면 이 작업은 스킵해도 된다
+* 방법
+    * elasticsearch config 디렉토리 이동 :  `$ cd /home/ec2-user/fc/elasticsearch-5.6.4/config`
+    * jvm 설정 파일 편집 : `$ vim jvm.options`
+    * 편집 모드 : `i` 입력
+    * Xms와 Xmx를 모두 512m로 변경
+    ```
+    -Xms512m
+    -Xmx512m
+    ```
+    * 저장 : `ESC 누르고 :wq 입력 후 Enter`
+
+    [[ images/install/jvm.gif | height = 500px | width = 1024px]]
+
+
+<a name='elasticsearch_ network'></a>
+#### Network 설정
+
+* elasticsearch config 디렉토리 이동 :  `$ cd /home/ec2-user/fc/elasticsearch-5.6.4/config`
+* elasticsearch.yml 파일 편집 : `$ vim elasticsearch.yml`
+* 입력 모드 전환 : `i` 입력
+* network.host에 EC2 Instance Public DNS 주소를 입력한다 
+    * 형식 : `network.host: {Public DNS}`
+    * 예시 : `network.host: ec2-12-345-67-891.ap-northeast-2.compute.amazonaws.com`
+* 저장 : `ESC 입력 후 :wq 후 Enter`
+
+[[ images/install/elasticsearch_yml.gif | height = 500px | width = 1024px]]
+
 ---
 
 <a name='configure_kibana'></a>
 ### Kibana 환경설정
+
+* Kibana config 디렉토리 이동 : `$ cd /home/ec2-user/fc/kibana-5.6.4-linux-x86_64/config`
+* kibana.yml 파일 편집 : `$ vim kibana.yml`
+* 입력 모드 전환 : `i` 입력
+* server.host와 elasticsearch.url 수정
+    * 형식
+        ```
+        server.host: "{Public DNS}"
+        elasticsearch.url: "http://{IPv4 Public IP address}:9200"
+        ```
+    * 예시
+        ```
+        server.host: "ec2-12-345-67-891.ap-northeast-2.compute.amazonaws.com"
+        elasticsearch.url: "http://12.345.67.891:9200"
+        ```
+[[ images/install/kibana_yml.gif | height = 500px | width = 1024px]]
+
+---
+
+<a name='start_elasticsearch'></a>
+### Elasticsearch 시작
+
+* Elasticsearch Home Directory 이동 : `cd /home/ec2-user/fc/elasticsearch-5.6.4`
+* 시작
+    * 일반 시작 : `$ bin/elasticsearch` 
+    * 데몬 시작 : `$ bin/elasticsearch -d`
+    * 백그라운드 시작 : `$ nohup bin/elasticsearch &`
+* 확인
+    * 브라우저로 확인 : `http://12.345.67.891:9200` 접속
+    * 콘솔로 확인 : `$ curl http://52.78.156.86:9200`
+
+[[ images/install/start_elsticsearch.gif | height = 500px | width = 1024px]]
+
+<a name='start_kibana'></a>
+### Kibana 시작
+
+* 주의할 점은 Elasticsearch를 작동 중인 상태에서 Kibana를 실행해야 한다는 것이다
+* 이를 위해 Elasticsearch를 한 번 중단 시키고 background에서 재실행한다
+     * 중단 : 터미널에서 `Control + c` 입력
+     * background 실행 : `$ nohup bin/elasticsearch &`
+* Kibana Home Directory 이동 : `$ cd /home/ec2-user/fc/kibana-5.6.4-linux-x86_64`
+* Kibana 실행
+    * 일반 시작 : `$ bin/kibana`
+    * 백그라운드 시작 : `$ nohup bin/kibana &`
+* 확인 : 브라우저로 `http:12.345.67.891:5601` 접속
+
+[[ images/install/start_kibana.gif | height = 500px | width = 1024px]]
