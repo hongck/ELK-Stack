@@ -88,11 +88,11 @@
     * 터미널 애플리케이션 실행 
     * aws_key directory 생성 : `$ mkdir /Users/gee/aws_key` 
     * aws_key로 이동 : `$ cd /Users/gee/aws_key`
-    * 다운 받은 키 페어 파일 (예: fc-test.pem) 이동 : `$ mv /Users/gee/Downloads/fc-test.pem ./`
+    * 다운 받은 키 페어 파일 이동 : `$ mv /Users/gee/Downloads/fc-test.pem ./`
     * 키 페어 파일 (fc-test.pem) 접근 권한 변경 : `$ chmod 400 fc-test.pem`
     * ssh로 AWS EC2 접속
         * 형식 : `$ ssh -i "{키 페어 이름}" {사용자 이름/ID}@{Public DNS}`
-        * 예시 : `$ ssh -i "fc-test.pem" ec2-user@ec2-13-345-67-234.ap-northeast-2.compute.amazonaws.com
+        * 예시 : `$ ssh -i "fc-test.pem" ec2-user@ec2-13-345-67-234.ap-northeast-2.compute.amazonaws.com`
 
 <a name='connect-windows'></a>
 * Windows
@@ -120,7 +120,7 @@
         * Category - Connection - Data : `Auto-login username` 입력 
             * 형태 : EC2 인스턴스 사용자 id
             * 예시 : `ec2-user`
-        * Category - Connection - SSH - Auth : `Private key file for authentication` 선택
+        * Category - Connection - SSH - Auth : `Private key file for authentication`
         * Category - Session - Saved Session : 저장할 임의의 Session 이름 입력 후 저장
         * Open 선택
 
