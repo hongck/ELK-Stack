@@ -43,8 +43,6 @@
 <a name='operator'></a>
 #### Operator 선택 및 Value 입력
 
-[[ images/filter/operator.png | height = 500px | width = 1024px]]
-
 * 적용하려는 operator 선택
 * 옵션
     * `is`
