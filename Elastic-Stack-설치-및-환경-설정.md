@@ -12,6 +12,8 @@
     * [Kibana 설치](#install_kibana)
 * 환경설정
     * [Elasticsearch 환경설정](#configure_elasticsearch)
+        * [Bootstarp Checks](#bootstrap)
+        * [JVM Options](#jvm)
     * [Kibana 환경설정](#configure_elasticsearch)
 
 ---
@@ -130,6 +132,7 @@ $ cd fc
 <a name='configure_elasticsearch'></a>
 ### Elasticsearch 환경설정
 
+<a name='bootstrap'></a>
 #### Elasticsearch Bootstrap Check 통과하기
 
 * max file descriptors 늘려주기
@@ -158,9 +161,28 @@ $ cd fc
 * virtual memory areas 늘리기
     * 설명
         * Elasticsearch는 `mmapfs` 디렉토리에 index를 저장한다 (default 설정)
-        * `mmap counts`에 대한 운영체제의 limit이 default로는 낮게 되어 있어서 높혀주지 않으면 out of memory 바생
+        * `mmap counts`에 대한 운영체제의 limit이 default로는 낮게 되어 있어서 높혀주지 않으면 out of memory 발생
     * 방법
+        * 임시 (재접속시 해제)
+            * 작업 전 확인 : `$ sudo sysctl -a | grep vm.max_map_count` => 65530
+            * 늘리기 : `sudo sysctl -w vm.max_map_count=262144`
+            * 작업 후 확인 : `$ sudo sysctl -a | grep vm.max_map_count` => 262144
+        * 영구적 (재접속 후에도 효과 지속)
+            * `$ sudo vim /etc/sysctl.conf`
+            * 편집 모드 변경 : `i` 입력
+            * sysctl.conf 가장 아래에 `vm.max_map_count=262144` 입력
+            * 저장 : `ESC 누르고 :wq 입력 후 Enter`
+            * 재시작 : `$ reboot`
+            * AWS EC2 재접속
+                * 형식 : `$ ssh -i "{키 페어 이름}" {사용자 이름/ID}@{Public DNS}`
+                * 예시 : `$ ssh -i "fc-test.pem" ec2-user@ec2-13-345-67-234.ap-northeast-2.compute.amazonaws.com`
+            
+            [[ images/install/virtual_memory.gif | height = 500px | width = 1024px]]
 
+<a name='jvm'></a>
+#### JVM Options
+
+* 테스트 환경에서 Free Tier EC2 Instance를 선택했기에  
 ---
 
 <a name='configure_kibana'></a>
