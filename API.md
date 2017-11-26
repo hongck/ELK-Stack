@@ -205,6 +205,7 @@ PUT test_index/_mapping/test_type
     {
       "{Field 이름}" : {Value}
     }
+    ```
     * 예시
     ```
     PUT test_index/test_type/1
@@ -214,6 +215,7 @@ PUT test_index/_mapping/test_type
       "상품" : "맥북프로"
     }
     ```
+
     [[ images/api/document/add_doc_put.png | height = 500px | width = 1024px]]
 
 * Document ID 지정하지 않음
@@ -223,6 +225,7 @@ PUT test_index/_mapping/test_type
     {
       "{Field 이름}" : {Value}
     }
+    ```
     * 예시
     ```
     PUT test_index/test_type/1
@@ -232,6 +235,7 @@ PUT test_index/_mapping/test_type
       "상품" : "맥북프로"
     }
     ```
+
     [[ images/api/document/add_doc_post.png | height = 500px | width = 1024px]]
 
 <a name='get_doc'></a>
@@ -434,44 +438,43 @@ POST test_index/test_type/_update_by_query
     [[ images/api/document/reindex_partial.png | height = 500px | width = 1024px]]
 
 <a name='reindex_remote'></a>
-#### 외부에 있는 Elasticsearch Index 복사
-
-* 형식
-```
-POST _reindex
-{
-  "source": {
-    "remote": {
-      "host": "{Elasticsearch url}",
-      "username": "{유저 이름}",
-      "password": "{비밀번호}"
-    },
-    "index": "{복사할 Index 이름}",
-  },
-  "dest": {
-    "index": "{복사본을 저장할 Index 이름}"
-  }
-}
-```
-* 예시
-```
-POST _reindex
-{
-  "source": {
-    "remote": {
-      "host": "http://otherhost:9200",
-      "username": "user",
-      "password": "pass"
-    },
-    "index": "source",
-    "query": {
-      "match": {
-        "test": "data"
+* 외부에 있는 Elasticsearch Index 복사
+    * 형식
+    ```
+    POST _reindex
+    {
+      "source": {
+        "remote": {
+          "host": "{Elasticsearch url}",
+          "username": "{유저 이름}",
+          "password": "{비밀번호}"
+        },
+        "index": "{복사할 Index 이름}",
+      },
+      "dest": {
+        "index": "{복사본을 저장할 Index 이름}"
       }
     }
-  },
-  "dest": {
-    "index": "dest"
-  }
-}
-```
+    ```
+    * 예시
+    ```
+    POST _reindex
+    {
+      "source": {
+        "remote": {
+          "host": "http://otherhost:9200",
+          "username": "user",
+          "password": "pass"
+        },
+        "index": "source",
+        "query": {
+          "match": {
+            "test": "data"
+          }
+        }
+      },
+      "dest": {
+        "index": "dest"
+      }
+    }
+    ```
