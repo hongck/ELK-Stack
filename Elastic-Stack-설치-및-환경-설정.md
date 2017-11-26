@@ -30,7 +30,7 @@
 
 `$ java -version`
 
-[[ images/install/java_versions_before.png | height = 500px | width = 1024px]]
+[[ images/install/java_version_before.png | height = 500px | width = 1024px]]
 
 #### Java 1.8 다운로드
 
