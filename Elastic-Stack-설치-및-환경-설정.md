@@ -268,3 +268,10 @@ $ cd fc
 * 확인 : 브라우저로 `http:12.345.67.891:5601` 접속
 
 [[ images/install/start_kibana.gif | height = 500px | width = 1024px]]
+
+---
+
+### Source
+* [elastic reference - JVM Heap Size](https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-size.html)
+* [elastic reference - File Descriptor](https://www.elastic.co/guide/en/elasticsearch/reference/current/file-descriptors.html)
+* [elastic reference - Virtual Memory](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
