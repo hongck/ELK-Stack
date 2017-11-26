@@ -2,6 +2,7 @@
 
 * 다양한 설치법 중 한 가지를 소개합니다
 * 테스트 환경 설정이므로 실 사용시에는 사용자 needs에 맞게 설정하기를 권장합니다.
+* AWS EC2에서 Elastic IP 설정을 안하면 서버를 Stop/Start 할 때 마다 elasticsearch.yml과 kibana.yml에서 IP 주소를 변경해야 합니다.
 
 ### 목록
 
