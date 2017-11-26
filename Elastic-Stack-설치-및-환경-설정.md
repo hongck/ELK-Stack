@@ -17,7 +17,7 @@
         * [Network](#elasticsearch_network)
     * [Kibana 환경설정](#configure_elasticsearch)
         * [Network[(#kibana_network)
-* 구동
+* 애플리케이션 실행
     * [Elasticsearch 시작](#start_elasticsearch)
     * [Kibana 시작](#start_kibana)
 ---
