@@ -1,5 +1,5 @@
 **Elasticsearch**
-   * 데이터 Type
+   * [Data Type](https://github.com/higee/elastic/wiki/Data-Type)
    * Index Mapping
    * Aggregation
        * [Bucket Agg](https://github.com/higee/elastic/wiki/Bucket-Agg)
