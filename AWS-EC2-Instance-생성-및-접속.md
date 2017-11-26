@@ -57,7 +57,7 @@
 
     * `보안 그룹 구성`
 
-    [[ images/aws/create/instance_ste6.gif | height = 500px | width = 1024px]]
+    [[ images/aws/create/instance_step6.gif | height = 500px | width = 1024px]]
 
     | 포트 범위 | 설명 |
     |----- |-------------|
@@ -99,9 +99,9 @@
     * [PuTTY 다운로드](http://www.putty.org/)
         * [페이지 이동](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
         * [시스템 종류에 맞는 putty 다운로드]
-        [[ images/aws/create/windows/putty_download.png | height = 500px | width = 1024px]]
+        [[ images/aws/connect/windows/putty_download.png | height = 500px | width = 1024px]]
         * [시스템 종류에 맞는 puttygen 다운로드]
-        [[ images/aws/create/windows/puttygen_download.png | height = 500px | width = 1024px]]
+        [[ images/aws/connect/windows/puttygen_download.png | height = 500px | width = 1024px]]
 
     * ppk 파일 생성
         * puttygen.exe 실행
@@ -110,7 +110,7 @@
         * parameters - type of key to generate => SSH 선택
         * Save private key 선택
 
-        [[ images/aws/create/windows/puttygen.gif | height = 500px | width = 1024px]]
+        [[ images/aws/connect/windows/puttygen.gif | height = 500px | width = 1024px]]
 
     * EC2 접속
         * putty.exe 실행
@@ -124,4 +124,4 @@
         * Category - Session - Saved Session : 저장할 임의의 Session 이름 입력 후 저장
         * Open 선택
 
-        [[ images/aws/create/windows/putty.gif | height = 500px | width = 1024px]]
+        [[ images/aws/connect/windows/putty.gif | height = 500px | width = 1024px]]
