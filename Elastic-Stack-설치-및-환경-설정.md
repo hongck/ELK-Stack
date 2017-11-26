@@ -30,7 +30,7 @@
 
 `$ java -version`
 
-[[ images/install/java_versions_before.pn | height = 500px | width = 1024px]]
+[[ images/install/java_versions_before.png | height = 500px | width = 1024px]]
 
 #### Java 1.8 다운로드
 
@@ -252,7 +252,7 @@ $ cd fc
     * 브라우저로 확인 : `http://12.345.67.891:9200` 접속
     * 콘솔로 확인 : `$ curl http://52.78.156.86:9200`
 
-[[ images/install/start_elsticsearch.gif | height = 500px | width = 1024px]]
+[[ images/install/start_elasticsearch.gif | height = 500px | width = 1024px]]
 
 <a name='start_kibana'></a>
 ### Kibana 시작
