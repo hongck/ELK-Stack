@@ -8,6 +8,6 @@
 |Core|Numeric|[Double](https://www.elastic.co/guide/en/elasticsearch/reference/current/number.html)| 기본 부동소수점으로 `float`, `half_float` 등 사용 가능 | 0.1, 0.01, 0.001
 |Geo|Geo-point|[Geo-point](https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-point.html)| 위도, 경도 쌍으로 특정 좌표 표시| "41.12,-71.34", [ -71.34, 41.12 ]
 |Complex|Array|[Array](https://www.elastic.co/guide/en/elasticsearch/reference/current/array.html)| 같은 datatype의 값을 복수개 갖음 | [1, 2, 3], ["one", "two"]
-|Complex|Object|[Object](https://www.elastic.co/guide/en/elasticsearch/reference/current/object.html)| Field가 또 다른 Field를 갖음| "출신": { "국가":"한국", "도시":"서울"}
-|Complex|Nested|[Nested](https://www.elastic.co/guide/en/elasticsearch/reference/current/nested.html)| 복수개 Object Field 존재| "출신":[{"국가":"한국", "도시":"서울"}, {"국가":"한국", "도시":"부산"}]
+|Complex|Object|[Object](https://www.elastic.co/guide/en/elasticsearch/reference/current/object.html)| Field 내 Field 존재| "출신": { "국가":"한국", "도시":"서울"}
+|Complex|Nested|[Nested](https://www.elastic.co/guide/en/elasticsearch/reference/current/nested.html)| 복수개 Object 존재| "출신":[{"국가":"한국", "도시":"서울"}, {"국가":"한국", "도시":"부산"}]
 
