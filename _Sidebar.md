@@ -1,5 +1,4 @@
 **Elasticsearch**
-   * 설치
    * 데이터 Type
    * Index Mapping
    * Aggregation
@@ -9,15 +8,11 @@
        * [Sibling Pipeline Agg](https://github.com/higee/elastic/wiki/Sibling-Pipeline-Agg)
 
 **Logstash**
-
-   * 설치
    * Input
    * Filter
    * Output
 
 **Kibana**
-   
-   * 설치
    * 기본 Workflow
         * [Index 등록](https://github.com/higee/elastic/wiki/index-%EB%93%B1%EB%A1%9D)
         * [데이터 탐색](https://github.com/higee/elastic/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%90%EC%83%89)
@@ -34,6 +29,6 @@
         * [Edit Visualization](https://github.com/higee/elastic/wiki/Visualization-%EC%88%98%EC%A0%95)
 
 **기타**
-
 * [AWS EC2 생성 및 접속](https://github.com/higee/elastic/wiki/AWS-EC2-Instance-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%A0%91%EC%86%8D#connect-windows)
+* [Elastic Stack 설치 및 환경설정](https://github.com/higee/elastic/wiki/Elastic-Stack-%EC%84%A4%EC%B9%98-%EB%B0%8F-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95)
 * [필수 Linux 명령어](https://github.com/higee/elastic/wiki/%ED%95%84%EC%88%98-linux-%EB%AA%85%EB%A0%B9%EC%96%B4)
