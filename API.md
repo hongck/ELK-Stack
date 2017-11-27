@@ -762,7 +762,7 @@ GET {Index 이름}/{Type 이름}/_search
 
 <a name='exists'></a>
 #### [Exists Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-exists-query.html)
-* 설명 : 검색하려는 Field에 `[non-null value](https://github.com/higee/elastic/issues/4)`가 하나라도 있는 Document를 표시한다        
+* 설명 : 검색하려는 Field에 [non-null value](https://github.com/higee/elastic/issues/4)가 하나라도 있는 Document를 표시한다        
 * 형식
 ```
 GET {Index 이름}/{Type 이름}/_search
