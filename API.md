@@ -906,6 +906,7 @@ GET {Index 이름}/{Type 이름}/_search
 }
 ```
 * 예시 : 판매자평점이 큰 순으로 정렬
+```
 GET shopping/shopping/_search
 {
   "query": {
@@ -937,17 +938,17 @@ GET shopping/shopping/_search
     }
    ```
    * 응용 : 특정 필드는 제외하고, 특정 필드는 포함시키고 싶을 때
-    ```
-    GET {Index 이름}/{Type 이름}/_search
-    {
-      "_source": {
-        "includes" : "{Field 이름}",
-        "excludes" : "{Field 이름}"
-      },
-      "query" : {
-        "match_all" : {}
-      }
-    }
+   ```
+   GET {Index 이름}/{Type 이름}/_search
+   {
+     "_source": {
+       "includes" : "{Field 이름}",
+       "excludes" : "{Field 이름}"
+     },
+     "query" : {
+       "match_all" : {}
+     }
+   }
    ```
 * 예시
 ```
@@ -965,3 +966,27 @@ GET shopping/shopping/_search
 
 <a name='scroll'></a>
 #### [Sort](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-scroll.html)
+
+* 설명 : 검색된 Documents는 한 번에 보여주지 않고 Page 별로 보여주게 하는 기능
+* 사용법 예시
+    * 검색 Query 작성
+    ```
+    POST shopping/shopping/_search?scroll=1m
+    {
+      "size": 10,
+      "query": {
+        "match" : {
+          "상품분류" : "셔츠"
+        }
+      }
+    }
+    ```
+    * 결과로 나온 `_scroll_id` 확인
+    * scroll를 이용한 결과 조회
+    ```
+    POST  /_search/scroll 
+    {
+      "scroll" : "1m", 
+      "scroll_id" : "{_scroll_id}" 
+    }
+    ```
