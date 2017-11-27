@@ -331,20 +331,20 @@ POST test_index/test_type/3/_update
 ```
 POST {Index 이름}/{Type 이름}/{ID}/_update
 {
-    "doc" : {
-        "{Field 이름}" : "{Value}"
-    },
-    "doc_as_upsert" : true
+  "doc" : {
+    "{Field 이름}" : "{Value}"
+  },
+  "doc_as_upsert" : true
 }
 ```
 * 예시
 ```
 POST test_index/type_type/3/_update
 {
-    "doc" : {
-        "나이" : "30"
-    },
-    "doc_as_upsert" : true
+  "doc" : {
+    "나이" : "30"
+  },
+  "doc_as_upsert" : true
 }
 ```
 
@@ -551,7 +551,6 @@ GET shopping/shopping/_search
 ```
 
 [[ images/api/search/match1.png | height = 500px | width = 1024px]]
-
 
 * 파라미터
     * `operator`, `minimum_should_match`가 자주 쓰인다
