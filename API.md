@@ -3,7 +3,8 @@
 * Kibana Console에서 사용 가능한 코드이다
 * Kibana Console은 Kibana 접속 후 `Dev Tools` 선택하면 나온다
 * 터미널에서 사용하는 `curl`을 이용하려면 적당히 변형이 필요하다
-* 한 번 설정한 Mapping은 변경할 수 없다.
+* 한 번 설정한 Mapping은 변경할 수 없다
+* reindex는 복사하려는 Index에 Mapping을 먼저 해두기를 권장한다
 
 ### 목록
 
@@ -368,8 +369,7 @@ POST test_index/test_type/_update_by_query
 
 
 #### [Document 복사](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html)
-* 복사하려는 Index에 Mapping을 먼저 해두기를 권장
-<a name='reindex_full')</a>
+<a name='reindex_full'></a>
 * 전체 Documents 복사
     * 형식
     ```
