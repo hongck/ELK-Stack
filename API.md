@@ -325,7 +325,7 @@ POST test_index/test_type/3/_update
 [[ images/api/document/update_doc_id.png | height = 500px | width = 1024px]]
 
 <a name='upsert_doc_id'></a>
-#### [ID로 조건부 Document 수정](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update.html)
+#### [ID로 조건부 Document 수정 : Document가 없으면 Document 생성하는 조건](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update.html)
 
 * 형식
 ```
