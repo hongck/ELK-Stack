@@ -514,13 +514,15 @@ GET {Index 이름}/{Type 이름}/_search
 ```
 * 예시
 ```
-GET test_index/test_type/_search
+GET shopping/shopping/_search
 {
   "query" : {
     "match_all" : {}
   }
 }
 ```
+
+[[ images/api/search/match_all.png | height = 500px | width = 1024px]]
 
 <a name='match'></a>
 #### [Match Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-match-query.html)
@@ -538,52 +540,58 @@ GET {Index 이름}/{Type 이름}/_search
 ```
 * 예시
 ```
-GET test_index/test_type/_search
+GET shopping/shopping/_search
 {
   "query" : {
     "match" : {
-      "상품" : "아이폰"
+      "상품분류" : "셔츠"
     }
   }
 }
 ```
+
+[[ images/api/search/match1.png | height = 500px | width = 1024px]]
+
+
 * 파라미터
     * `operator`, `minimum_should_match`가 자주 쓰인다
     * operator
         * `and` 또는 `or` 이며 기본은 `or`이다
-        * `query`가 "아이폰 이어폰"이면 
-            * and일 경우 "아이폰", "이어폰"을 모두 가진 Document가 출력되며
-            * or일 경우, "아이폰", "이어폰" 중 하나라도 가진 Document가 출력된다
+        * `query`가 "상품 이상"면 
+            * and일 경우 "상품", "이상"를 모두 가진 Document가 출력되며
+            * or일 경우, "상품", "이상" 중 하나라도 가진 Document가 출력된다
         * 예시
         ```
-        GET test_index/test_type/_search
+        GET shopping/shopping/_search
         {
           "query": {
             "match" : {
-              "상품" : {
-                "query" : "아이폰 이어폰",
+              "배송메모" : {
+                "query" : "상품 이상",
                 "operator" : "and"
               }
             }
           }
         }
         ```
+     [[ images/api/search/match2.png | height = 500px | width = 1024px]]
      * minimum_should_match
-        * `query`가 "아이폰 이어폰 아이맥"이고 `minium_should_match`가 2라고 하면 "아이폰", "이어폰", "아이맥" 중 적어도 2개는 포함하는 Documents가 출력된다. (operator는 default로 or이다)
+        * `query`가 "상품 이상 고장"이고 `minium_should_match`가 2라고 하면 "상품", "이상", "고장" 중 적어도 2개는 포함하는 Documents가 출력된다. (operator는 default로 or이다)
         * 예시
         ```
-        GET test_index/test_type/_search
+        GET shopping/shopping/_search
         {
           "query": {
             "match" : {
-              "상품" : {
-                "query" : "아이폰 이어폰 아이맥",
+              "배송메모" : {
+                "query" : "상품 이상 고장",
                 "minimum_should_match" : 2
               }
             }
           }
         }
         ```
+        [[ images/api/search/match3.png | height = 500px | width = 1024px]]
 
 <a name='query_string'></a>
 #### [Query String Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-query-string-query.html#query-dsl-query-string-query)
@@ -612,6 +620,8 @@ GET shopping/_search
 }
 ```
 
+[[ images/api/search/query_string.png | height = 500px | width = 1024px]]
+
 <a name='bool'></a>
 #### [Bool Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-bool-query.html)
 * 설명
@@ -622,7 +632,7 @@ GET shopping/_search
     * must not : 반드시 제외되어야 하는 query
 * 예시 
 ```
-GET shopping/_search
+GET shopping/shopping/_search
 {
   "query": {
     "bool": {
@@ -640,7 +650,7 @@ GET shopping/_search
   }
 }
 ```
-
+[[ images/api/search/bool.png | height = 500px | width = 1024px]]
 
 <a name='term'></a>
 #### [Term Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-term-query.html)
@@ -659,7 +669,7 @@ GET {Index 이름}/{Type 이름}/_search
 ```
 * 예시
 ```
-GET shopping/shopping//_search
+GET shopping/shopping/_search
 {
   "query" : {
     "term" : {
@@ -668,6 +678,7 @@ GET shopping/shopping//_search
   }
 }
 ```
+[[ images/api/search/term.png | height = 500px | width = 1024px]]
 
 <a name='terms'></a>
 #### [Terms Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-terms-query.html)
@@ -685,7 +696,7 @@ GET {Index 이름}/{Type 이름}/_search
 ```
 * 예시
 ```
-GET shopping/shoopping/_search
+GET shopping/shopping/_search
 {
   "query" : {
     "terms" : {
@@ -694,6 +705,7 @@ GET shopping/shoopping/_search
   }
 }
 ```
+[[ images/api/search/terms.png | height = 500px | width = 1024px]]
 
 <a name='range'></a>
 #### [Range Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-range-query.html)
@@ -720,7 +732,7 @@ GET {Index 이름}/{Type 이름}/_search
 * 예시
     * Date Field
     ```
-    GET shopping/_search
+    GET shopping/shopping/_search
     {
       "query": {
         "range": {
@@ -731,9 +743,11 @@ GET {Index 이름}/{Type 이름}/_search
       }
     }
     ```
+    [[ images/api/search/range_date.png | height = 500px | width = 1024px]]
+
     * Number Field
     ```
-    GET shopping/_search
+    GET shopping/shopping/_search
     {
       "query": {
         "range": {
@@ -745,6 +759,7 @@ GET {Index 이름}/{Type 이름}/_search
       }
     }
     ``` 
+    [[ images/api/search/range_number.png | height = 500px | width = 1024px]]
 
 <a name='exists'></a>
 #### [Exists Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-exists-query.html)
@@ -771,6 +786,7 @@ GET shopping/shopping/_search
   }
 }
 ```
+[[ images/api/search/exists.png | height = 500px | width = 1024px]]
 
 <a name='prefix'></a>
 #### [Prefix Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-prefix-query.html)
@@ -797,6 +813,7 @@ GET shopping/shopping/_search
   }
 }
 ```
+[[ images/api/search/prefix.png | height = 500px | width = 1024px]]
 
 <a name='wildcard'></a>
 #### [Wildcard Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-wildcard-query.html)
@@ -823,6 +840,8 @@ GET shopping/shopping/_search
   }
 }
 ```
+[[ images/api/search/wildcard.png | height = 500px | width = 1024px]]
+
 
 <a name='fuzzy'></a>
 #### [Fuzzy Query](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/query-dsl-fuzzy-query.html)
@@ -861,13 +880,14 @@ GET shopping/shopping/_search
   "query": {
     "fuzzy" : {
       "고객주소_시도" : {
-        "value" : "경상남남",
+        "value" : "경상북남",
         "fuzziness" : 2
       }
     }
   }
 }
 ```
+[[ images/api/search/fuzzy.png | height = 500px | width = 1024px]]
 
 <a name='size'></a>
 #### [From/Size](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-from-size.html)
@@ -877,12 +897,13 @@ GET shopping/shopping/_search
 ```
 GET shopping/shopping/_search
 {
-  "from" : 0, "size" : 10,
+  "from" : 0, "size" : 1,
   "query" : {
     "match_all" : {}
   }
 }
 ```
+[[ images/api/search/from_size.png | height = 500px | width = 1024px]]
 
 <a name='sort'></a>
 #### [Sort](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-sort.html)
@@ -921,6 +942,7 @@ GET shopping/shopping/_search
   ]
 }
 ```
+[[ images/api/search/sort.png | height = 500px | width = 1024px]]
 
 <a name='source'></a>
 #### [Source](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-source-filtering.html)
@@ -963,6 +985,7 @@ GET shopping/shopping/_search
   }
 }
 ```
+[[ images/api/search/source.png | height = 500px | width = 1024px]]
 
 <a name='scroll'></a>
 #### [Sort](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-scroll.html)
@@ -971,9 +994,9 @@ GET shopping/shopping/_search
 * 사용법 예시
     * 검색 Query 작성
     ```
-    POST shopping/shopping/_search?scroll=1m
+    POST shopping/shopping/_search?scroll=10m
     {
-      "size": 10,
+      "size": 500,
       "query": {
         "match" : {
           "상품분류" : "셔츠"
@@ -981,12 +1004,14 @@ GET shopping/shopping/_search
       }
     }
     ```
+    [[ images/api/search/scroll1.png | height = 500px | width = 1024px]]
     * 결과로 나온 `_scroll_id` 확인
     * scroll를 이용한 결과 조회
     ```
     POST  /_search/scroll 
     {
-      "scroll" : "1m", 
+      "scroll" : "10m", 
       "scroll_id" : "{_scroll_id}" 
     }
     ```
+    [[ images/api/search/scroll_result.gif | height = 500px | width = 1024px]]
