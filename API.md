@@ -387,7 +387,7 @@ POST {Index 이름}/{Type 이름}/_update_by_query
     POST test_index/test_type/_update_by_query
     {
       "script": {
-        "inline" : "ctx._source['가격'] = 7777; ctx._source['나이'] = 19];",
+        "source" : "ctx._source['가격'] = 7777; ctx._source['나이'] = 19;",
         "lang" : "painless"
       },
       "query": {
