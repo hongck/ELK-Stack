@@ -367,23 +367,37 @@ POST {Index 이름}/{Type 이름}/_update_by_query
 }
 ```
 * 예시
-```
-POST test_index/test_type/_update_by_query
-{
-  "script": {
-    "source": "ctx._source['가격'] = 7777",
-    "lang": "painless"
-  },
-  "query": {
-    "term": {
-      "상품": "아이폰"
+    * 1개 Field
+    ```
+    POST test_index/test_type/_update_by_query
+    {
+      "script": {
+        "source": "ctx._source['가격'] = 7777",
+         "lang": "painless"
+      },
+      "query": {
+        "term": {
+          "상품": "아이폰"
+        }
+      }
     }
-  }
-}
-```
-
-[[ images/api/document/update_doc_query.png | height = 500px | width = 1024px]]
-
+    ```
+    * 복수개 Field
+    ```
+    POST test_index/test_type/_update_by_query
+    {
+      "script": {
+        "inline" : "ctx._source['가격'] = 7777; ctx._source['나이'] = 19];",
+        "lang" : "painless"
+      },
+      "query": {
+        "term": {
+          "나이": 17
+        }
+      }
+    }
+    ```
+   [[ images/api/document/update_doc_query.png | height = 500px | width = 1024px]]
 
 #### [Document 복사](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html)
 <a name='reindex_full'></a>
