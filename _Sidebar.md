@@ -29,6 +29,6 @@
         * [Edit Visualization](https://github.com/higee/elastic/wiki/Visualization-%EC%88%98%EC%A0%95)
 
 **기타**
-* [AWS EC2 생성 및 접속](https://github.com/higee/elastic/wiki/AWS-EC2-Instance-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%A0%91%EC%86%8D#connect-windows)
+* [AWS EC2 생성 및 접속](https://github.com/higee/elastic/wiki/AWS-EC2-Instance-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%A0%91%EC%86%8D)
 * [Elastic Stack 설치 및 환경설정](https://github.com/higee/elastic/wiki/Elastic-Stack-%EC%84%A4%EC%B9%98-%EB%B0%8F-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95)
 * [필수 Linux 명령어](https://github.com/higee/elastic/wiki/%ED%95%84%EC%88%98-linux-%EB%AA%85%EB%A0%B9%EC%96%B4)
