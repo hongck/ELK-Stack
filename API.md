@@ -987,7 +987,7 @@ GET shopping/shopping/_search
 [[ images/api/search/source.png | height = 500px | width = 1024px]]
 
 <a name='scroll'></a>
-#### [Sort](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-scroll.html)
+#### [Scroll](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-scroll.html)
 
 * 설명 : 검색된 Documents는 한 번에 보여주지 않고 Page 별로 보여주게 하는 기능
 * 사용법 예시
