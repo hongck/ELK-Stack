@@ -16,7 +16,7 @@
         * [Bootstarp Checks](#bootstrap)
         * [JVM Options](#jvm)
         * [Network](#elasticsearch_network)
-    * [Kibana 환경설정](#configure_elasticsearch)
+    * Kibana 환경설정
         * [Network][(#kibana_network)
 * 애플리케이션 실행
     * [Elasticsearch 시작](#start_elasticsearch)
@@ -204,7 +204,7 @@ $ cd fc
     [[ images/install/jvm.gif | height = 500px | width = 1024px]]
 
 
-<a name='elasticsearch_ network'></a>
+<a name='elasticsearch_network'></a>
 #### Network 설정
 
 * elasticsearch config 디렉토리 이동 :  `$ cd /home/ec2-user/fc/elasticsearch-5.6.4/config`
@@ -219,7 +219,7 @@ $ cd fc
 
 ---
 
-<a name='configure_kibana'></a>
+<a name='kibana_network'></a>
 ### Kibana 환경설정
 
 * Kibana config 디렉토리 이동 : `$ cd /home/ec2-user/fc/kibana-5.6.4-linux-x86_64/config`
