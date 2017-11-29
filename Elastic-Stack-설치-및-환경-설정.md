@@ -17,7 +17,7 @@
         * [JVM Options](#jvm)
         * [Network](#elasticsearch_network)
     * Kibana 환경설정
-        * [Network][(#kibana_network)
+        * [Network](#kibana_network)
 * 애플리케이션 실행
     * [Elasticsearch 시작](#start_elasticsearch)
     * [Kibana 시작](#start_kibana)
