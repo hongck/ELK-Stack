@@ -112,6 +112,7 @@
 
         [[ images/aws/connect/windows/puttygen.gif | height = 500px | width = 1024px]]
 
+    <a name='connect-windows-putty'></a>
     * EC2 접속
         * putty.exe 실행
         * Category - Session : `Host Name` 입력
