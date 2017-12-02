@@ -187,7 +187,7 @@ $ cd fc
                     * 저장한 Settings 불러오기
                         * Category - Session에서 저장한 Settings Load 선택
                         * 밑에 Open 선택
-                    * 저장한 Settings가 없는 경우 : [수동으로 다시 접속](#https://github.com/higee/elastic/wiki/AWS-EC2-Instance-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%A0%91%EC%86%8D#connect-windows-putty)
+                    * 저장한 Settings가 없는 경우 : [수동으로 다시 접속](https://github.com/higee/elastic/wiki/AWS-EC2-Instance-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%A0%91%EC%86%8D#connect-windows-putty)
             
             [[ images/install/virtual_memory.gif | height = 500px | width = 1024px]]
 
@@ -272,7 +272,7 @@ $ cd fc
 * Kibana 실행
     * 일반 시작 : `$ bin/kibana`
     * 백그라운드 시작 : `$ nohup bin/kibana &`
-* 확인 : 브라우저로 `http:12.345.67.891:5601` 접속
+* 확인 : 브라우저로 `http://12.345.67.891:5601` 접속
 
 [[ images/install/start_kibana.gif | height = 500px | width = 1024px]]
 
