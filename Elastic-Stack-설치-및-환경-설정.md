@@ -159,7 +159,7 @@ $ cd fc
          $ sudo su
          $ su - ec2-user
          ```
-         * 작업 후 재확인 : `$ ulimit -Hn # have it checked`
+         * 작업 후 재확인 : `$ ulimit -Hn`
 
          [[ images/install/max_file_descriptor.gif | height = 500px | width = 1024px]]
 
@@ -177,10 +177,17 @@ $ cd fc
             * 편집 모드 변경 : `i` 입력
             * sysctl.conf 가장 아래에 `vm.max_map_count=262144` 입력
             * 저장 : `ESC 누르고 :wq 입력 후 Enter`
-            * 재시작 : `$ reboot`
+            * 재시작 : `$ sudo reboot`
             * AWS EC2 재접속
-                * 형식 : `$ ssh -i "{키 페어 이름}" {사용자 이름/ID}@{Public DNS}`
-                * 예시 : `$ ssh -i "fc-test.pem" ec2-user@ec2-13-345-67-234.ap-northeast-2.compute.amazonaws.com`
+                * Mac
+                    * 형식 : `$ ssh -i "{키 페어 이름}" {사용자 이름/ID}@{Public DNS}`
+                    * 예시 : `$ ssh -i "fc-test.pem" ec2-user@ec2-12-345-67-891.ap-northeast-2.compute.amazonaws.com`
+                * Windows
+                    * Putty.exe 실행
+                    * 저장한 Settings 불러오기
+                        * Category - Session에서 저장한 Settings Load 선택
+                        * 밑에 Open 선택
+                    * 저장한 Settings가 없는 경우 : [수동으로 다시 접속](#https://github.com/higee/elastic/wiki/AWS-EC2-Instance-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%A0%91%EC%86%8D#connect-windows-putty)
             
             [[ images/install/virtual_memory.gif | height = 500px | width = 1024px]]
 
