@@ -1,6 +1,6 @@
 ### 예시
 
-[[ images/logstash/logstash-example.gif | height = 500px | width = 1024px]]
+[[ images/logstash/input/stdin.gif | height = 500px | width = 1024px]]
 
 ### 목록
 
@@ -75,7 +75,8 @@
 * 명령어 : `$ cd ~/fc/logstash-5.6.4/`
 
 <a name='logstash-conf'></a>
-#### Logstash 실행파일 생성
+#### config 파일 생성
 
-* 데이터 수집 및 전처리를 위한 모든 작업은 Logstash 실행 파일 내부에서 코드를 작성한다
+* 데이터 수집 및 전처리를 위한 모든 실질적인 작업은 Logstash config 파일 내부의 코드 작성이다
+* 실제 코드 작성에 앞서 config 파일을 생성하자
 * 명령어 : `$ touch logstash.conf`
