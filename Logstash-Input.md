@@ -80,7 +80,7 @@
    ```
    * logstash 실행 : `$ bin/logstash -f csv.conf`
 * 주요 Configuration Options (전체 Options은 [elastic](https://www.elastic.co/guide/en/logstash/6.0/plugins-inputs-file.html) 참조)
-    * path
+    * `path`
         * Logstash를 통해 수집하려는 데이터 위치
         * 절대경로를 입력해야 한다 (상대경로 x)
         * 복수개 경로를 입력할 때는 배열로 한다 : `path => [ "/var/log/171201.log", "/var/log/171202.log" ]`
@@ -98,7 +98,7 @@
           }
         }
         ```
-    * exclude
+    * `exclude`
         * path에서 설정한 파일 중 제외할 파일 설정
         * 복수개 경로를 입력할 때는 배열로 한다 : `exclude => [ "/var/log/171201.log", "/var/log/171202.log" ]`
         * wildcard도 사용 가능하다 : `exclude => "/var/log/1712*.log"`
@@ -118,12 +118,12 @@
         }
         ```
 
-    * sincedb_path
+    * `sincedb_path`
         * logstash가 특정 파일의 어느 위치까지 조회했는지 sincedb에 기록한다
         * 그러므로 logstash를 중단하고 다시 시작해도 중단하기 전의 위치부터 조회하여 데이터를 누락하지 않는다
         * sincedb 파일은 Logstash Home directory 아래 data/plugins/inputs/file 아래 생긴다
             *  실습환경의 경우 : `/home/ec2-user/fc/logstash-5.6.4/data/plugins/inputs/file/`
-    * start_position 
+    * `start_position`
         * `beginning` 또는 `end` 중에 하나로 설정한다
         * 파일의 처음부터 조회할지 마지막부터 조회할지 설정하는 옵션으로 default는 streaming 목적으로 `end`다
         * 단, 이 옵션은 특정 파일을 logstash로 처음 읽을 때만 적용되고 그 후에는 sincedb에 저장된 부분부터 이어서 읽는다
@@ -141,7 +141,7 @@
           }
         }
         ```
-    * sincedb_write_interval
+    * `sincedb_write_interval`
         * logstash가 몇 초 주기로 sincedb에 파일을 어디까지 읽었는지 기록할지 설정한다
         ```
         input {
@@ -157,7 +157,7 @@
           }
         }
         ```
-    * stat_interval 
+    * `stat_interval`
         * 몇 초 주기로 현재 조회하고 있는 파일이 수정되었는지 확인할지 설정한다
         * 간격을 작게할수록 실시간으로 데이터 수집이 가능하나 시스템 부하는 커진다
         ```
@@ -174,7 +174,7 @@
           }
         }
         ```
-    * ignore_older
+    * `ignore_older`
         * 이 옵션으로 설정한 시간(초 단위)보다 이전에 수정된 파일은 무시한다
         * 단, 처음에 무시되었지만 그 후에 파일이 새로 수정될 경우는 제대로 수집된다
         * 특별한 용도로 `ignore_older => 0`과 같이 사용하면 logstash가 이미 조회했던 데이터도 다시 조회한다 [참고](https://stackoverflow.com/questions/39011806/difference-between-ignore-older-and-sincedb-path-in-logstash)
