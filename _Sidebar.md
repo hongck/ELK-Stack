@@ -9,7 +9,7 @@
 
 **Logstash**
    * 기본 Workflow
-       * [config 생성](https://github.com/higee/elastic/wiki/Logstash-%EC%8B%A4%ED%96%89-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1)
+       * [config 생성](https://github.com/higee/elastic/wiki/Logstash-config-%EC%83%9D%EC%84%B1)
        * [config 편집]
            * [Input]
            * [Filter]
