@@ -258,7 +258,7 @@
    }
    ```
    * logstash 실행 : `$ bin/logstash -f db.conf`
-* 주요 Configuration Options (전체는 [참고](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html#plugins-inputs-jdbc-jdbc_driver_library)
+* 주요 Configuration Options (전체는 [참고](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html#plugins-inputs-jdbc-jdbc_driver_library))
     * jdbc_connection_string
         * 사용하는 db 종류, db가 위치한 host, db 이름 등 명시해야 한다
         * 예를 들어, `jdbc:mysql://52.78.61.155:3306/fc`의 경우
@@ -286,6 +286,8 @@
             jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
+            jdbc_user => "fc"
+            jdbc_password => "fc"
             statement => "SELECT * FROM fc"
             schedule => "0 0 * * * * "
           }
@@ -298,12 +300,94 @@
         }
         ```
     * statement : db에서 어떤 row를 추출할지 query를 작성하여 선택
-    * parameter
-        * statement에서 parameter 값을 받아서 사용 가능
-        * `sql_last_value`와 같이 built-in parameter도 있고
-        * 직접 설정도 가능하다
     * use_column_value
+        * db의 column value를 통해 이미 조회한 값인지 판단할지 설정
+        * `true` 또는 `false`
+        ```
+        input {
+          jdbc  {
+            jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+            jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
+            jdbc_driver_class => "com.mysql.jdbc.Driver"
+            jdbc_user => "fc"
+            jdbc_password => "fc"
+            use_column_value => true
+            statement => "SELECT * FROM fc"
+          }
+        }
+   
+        output {
+          stdout {
+            codec => rubydebug
+          }
+        }
+        ```
+
     * tracking_column 
+        * 위의 `use_column_value`가 true일 경우, 어떤 column으로 track할 지 설정
+        ```
+        input {
+          jdbc  {
+            jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+            jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
+            jdbc_driver_class => "com.mysql.jdbc.Driver"
+            jdbc_user => "fc"
+            jdbc_password => "fc"
+            use_column_value => true
+            tracking_column => "id"
+            statement => "SELECT * FROM fc"
+          }
+        }
+   
+        output {
+          stdout {
+            codec => rubydebug
+          }
+        }
+        ```
+    * parameters
+        * statement에서 parameter 값을 받아서 사용 가능
+        * `sql_last_value`[참고](https://discuss.elastic.co/t/how-should-i-use-sql-last-value-in-logstash/64595/7)와 같이 built-in parameter도 있고
+        ```
+        input {
+          jdbc  {
+            jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+            jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
+            jdbc_driver_class => "com.mysql.jdbc.Driver"
+            jdbc_user => "fc"
+            jdbc_password => "fc"
+            statement => "SELECT * FROM fc > :sql_last_value"
+            use_column_value => true
+            tracking_column => "id"
+          }
+        }
+   
+        output {
+          stdout {
+            codec => rubydebug
+          }
+        }
+        ```
+        * 직접 설정도 가능하다
+        ```
+        input {
+          jdbc  {
+            jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+            jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
+            jdbc_driver_class => "com.mysql.jdbc.Driver"
+            jdbc_user => "fc"
+            jdbc_password => "fc"
+            parameters => { "my_country" => "KR" }
+            statement => "SELECT * FROM fc WHERE location = my_country"
+          }
+        }
+   
+        output {
+          stdout {
+            codec => rubydebug
+          }
+        }
+        ```
 
 <a name='logstash-es'></a>
 #### elasticsearch
