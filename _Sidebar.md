@@ -8,9 +8,13 @@
        * [Sibling Pipeline Agg](https://github.com/higee/elastic/wiki/Sibling-Pipeline-Agg)
 
 **Logstash**
-   * Input
-   * Filter
-   * Output
+   * 기본 Workflow
+       * [Logstash 실행 파일 생성](https://github.com/higee/elastic/wiki/Logstash-%EC%8B%A4%ED%96%89-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1)
+       * [Logstash 실행 파일 편집]
+           * [Input]
+           * [Filter]
+           * [Output]
+       * [Logstash 실행 파일 실행]
 
 **Kibana**
    * 기본 Workflow
