@@ -259,30 +259,30 @@
    ```
    * logstash 실행 : `$ bin/logstash -f db.conf`
 * 주요 Configuration Options (전체는 [참고](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html#plugins-inputs-jdbc-jdbc_driver_library))
-    * jdbc_connection_string
+    * `jdbc_connection_string`
         * 사용하는 db 종류, db가 위치한 host, db 이름 등 명시해야 한다
         * 예를 들어, `jdbc:mysql://52.78.61.155:3306/fc`의 경우
             * db 종류 : mysql
             * db host : 52.78.61.155:3306 
             * db 이름 : fc
-    * jdbc_driver_class
+    * `jdbc_driver_class`
         * 사용하는 jdbc driver 명시
         * 예를 들어
             * [oracle](https://github.com/logstash-plugins/logstash-input-jdbc/issues/43) : `"oracle.jdbc.driver.OracleDriver"`
             * mysql : `"com.mysql.jdbc.Driver"`
-    * jdbc_driver_library
+    * `jdbc_driver_library`
         * 사용하는 jdbc driver 위치 설정
         * 일반적으로, local에 다운로드 받고 경로를 설정한다
-    * jdbc_user : db 서버에서 권한을 부여 받은 사용자 이름
-    * jdbc_password : 위의 사용자 비밀번호
-    * jdbc_validate_connection : jdbc로 제대로 연결되었는지 확인 
-    * schedule
+    * `jdbc_user` & `jdbc_password` : db 서버에서 권한을 부여 받은 사용자 이름과 비밀번호
+    * `jdbc_validate_connection` : jdbc로 제대로 연결되었는지 확인 
+    * `schedule`
         * staetement (SQL query)를 언제 또는 얼마나 주기적으로 실행할지 설정
         * format은 [Cron format](http://www.nncron.ru/help/EN/working/cron-format.htm)이다
         * 예를 들어, 매일 새벽 0시에 statement를 실행하고 싶은 경우
         ```
         input {
           jdbc  {
+            jdbc_validate_connection => true
             jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
@@ -299,13 +299,14 @@
           }
         }
         ```
-    * statement : db에서 어떤 row를 추출할지 query를 작성하여 선택
-    * use_column_value
+    * `statement` : db에서 어떤 row를 추출할지 query를 작성하여 선택
+    * `use_column_value`
         * db의 column value를 통해 이미 조회한 값인지 판단할지 설정
         * `true` 또는 `false`
         ```
         input {
           jdbc  {
+            jdbc_validate_connection => true
             jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
@@ -323,11 +324,12 @@
         }
         ```
 
-    * tracking_column 
+    * `tracking_column` 
         * 위의 `use_column_value`가 true일 경우, 어떤 column으로 track할 지 설정
         ```
         input {
           jdbc  {
+            jdbc_validate_connection => true
             jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
@@ -345,12 +347,13 @@
           }
         }
         ```
-    * parameters
+    * `parameters`
         * statement에서 parameter 값을 받아서 사용 가능
-        * `sql_last_value`[참고](https://discuss.elastic.co/t/how-should-i-use-sql-last-value-in-logstash/64595/7)와 같이 built-in parameter도 있고
+        * `sql_last_value` ([참고](https://discuss.elastic.co/t/how-should-i-use-sql-last-value-in-logstash/64595/7))와 같이 built-in parameter도 있고
         ```
         input {
           jdbc  {
+            jdbc_validate_connection => true
             jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
@@ -372,13 +375,14 @@
         ```
         input {
           jdbc  {
+            jdbc_validate_connection => true
             jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
             jdbc_user => "fc"
             jdbc_password => "fc"
             parameters => { "my_country" => "KR" }
-            statement => "SELECT * FROM fc WHERE location = my_country"
+            statement => "SELECT * FROM fc WHERE location = :my_country"
           }
         }
    
@@ -414,7 +418,7 @@
   }
    ```
   * logstash 실행 : `$ bin/logstash -f es.conf`
-* 주요 Configuration Options (전체 Options은 [elastic](https://www.elastic.co/guide/en/logstash/6.0/plugins-inputs-elasticsearch.html#plugins-inputs-elasticsearch-options) 참조)
-    * hosts : 데이터를 수집하려는 Elasticsearch Host 정보
-    * index : 선택한 Elasticsearch Host의 어느 index에서 데이터를 수집할지 설정
-    * query : 선택한 index에서 어떤 Documents를 수집할 지 query DSL을 통해 설정
+* 주요 Configuration Options (전체 Options은 [elastic](https://www.elastic.co/guide/en/logstash/6.0/plugins-inputs-elasticsearch.html#plugins-inputs-elasticsearch-options) 참고)
+    * `hosts` : 데이터를 수집하려는 Elasticsearch Host 정보
+    * `index` : 선택한 Elasticsearch Host의 어느 index에서 데이터를 수집할지 설정
+    * `query` : 선택한 index에서 어떤 Documents를 수집할 지 query DSL을 통해 설정
