@@ -10,11 +10,11 @@
 **Logstash**
    * 기본 Workflow
        * [config 생성](https://github.com/higee/elastic/wiki/Logstash-config-%EC%83%9D%EC%84%B1)
-       * [config 편집]
-           * [Input]
+       * config 편집
+           * [Input](https://github.com/higee/elastic/wiki/Logstash-Input)
            * [Filter]
            * [Output]
-       * [실행]
+       * 실행
 
 **Kibana**
    * 기본 Workflow
