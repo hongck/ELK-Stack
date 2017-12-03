@@ -1,6 +1,6 @@
-### 주의
+### 예시
 
-* AWS t2.micro 사용을 위한 설정이 들어가있으므로 실 사용시에는 적절히 변경하는 걸 권장한다.
+[[ images/logstash/logstash-example.gif | height = 500px | width = 1024px]]
 
 ### 목록
 
@@ -10,7 +10,6 @@
 * Logstash
     * [Logstash Home Directory 이동](#logstash-home)
     * [Logstash 실행 파일 생성](#logstash-conf)
-
 ---
 
 ### 사전준비
