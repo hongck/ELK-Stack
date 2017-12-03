@@ -16,7 +16,7 @@
 ### 사전준비
 
 * 테스트 환경으로 `AWS EC2 t2.micro instance`를 사용하기에 필요한 옵션이다.
-* 테스트 환경이라도 이보다 더 넉넉한 Memory를 사용하고 있다면 다음 단계로 넘어가도 된다.
+* 테스트 환경이라도 이보다 더 넉넉한 Memory를 사용하고 있다면 [다음 단계](https://github.com/higee/elastic/wiki/Logstash-%EC%8B%A4%ED%96%89-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1#logstash-home)로 넘어가도 된다.
 
 <a name='elasticsearch-jvm'></a>
 #### elasticsearch JVM options 조정
