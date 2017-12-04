@@ -241,7 +241,7 @@
    ```
    input {
      jdbc  {
-       jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+       jdbc_connection_string => "jdbc:mysql://13.125.21.52:3306/fc"
        jdbc_validate_connection => true
        jdbc_user => "fc"
        jdbc_password => "fc"
@@ -283,7 +283,7 @@
         input {
           jdbc  {
             jdbc_validate_connection => true
-            jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+            jdbc_connection_string => "jdbc:mysql://13.125.21.52:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
             jdbc_user => "fc"
@@ -307,7 +307,7 @@
         input {
           jdbc  {
             jdbc_validate_connection => true
-            jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+            jdbc_connection_string => "jdbc:mysql://13.125.21.52:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
             jdbc_user => "fc"
@@ -330,7 +330,7 @@
         input {
           jdbc  {
             jdbc_validate_connection => true
-            jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+            jdbc_connection_string => "jdbc:mysql://13.125.21.52:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
             jdbc_user => "fc"
@@ -354,7 +354,7 @@
         input {
           jdbc  {
             jdbc_validate_connection => true
-            jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+            jdbc_connection_string => "jdbc:mysql://13.125.21.52:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
             jdbc_user => "fc"
@@ -376,7 +376,7 @@
         input {
           jdbc  {
             jdbc_validate_connection => true
-            jdbc_connection_string => "jdbc:mysql://52.78.61.155:3306/fc"
+            jdbc_connection_string => "jdbc:mysql://13.125.21.52:3306/fc"
             jdbc_driver_library => "/home/ec2-user/fc/logstash-5.6.4/driver/mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar"
             jdbc_driver_class => "com.mysql.jdbc.Driver"
             jdbc_user => "fc"
@@ -405,7 +405,7 @@
    ```
   input {
     elasticsearch {
-      hosts => ["52.78.61.155:9200"]
+      hosts => ["13.125.21.52:9200"]
       index => "test"
       query => '{ "query": { "match_all": {}}}'
     }
