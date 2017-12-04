@@ -13,7 +13,7 @@
        * config 편집
            * [Input](https://github.com/higee/elastic/wiki/Logstash-Input)
            * [Filter]
-           * [Output]
+           * [Output](https://github.com/higee/elastic/wiki/Logstash-Output)
        * 실행
 
 **Kibana**
