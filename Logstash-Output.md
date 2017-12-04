@@ -70,13 +70,10 @@
     }
     ```
 * 주요 Configuration Options
-    * doc_as_upsert
-    * document_id
-    * document_type
-    * hosts
-    * index
-    * 
-
+    * hosts : 데이터를 저장할 Elasticsearch의 Host
+    * index : Elasticsearch Host의 어떤 Index에 저장할지 설정 (없으면 생성)
+    * document_type : Index의 어떤 Type에 저장할지 설정 (없으면 생성)
+    * document_id : Document ID를 직접 지정 
 
 <a name='slack'></a>
 #### Slack (커뮤니티)
