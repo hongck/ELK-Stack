@@ -95,9 +95,9 @@
     * Logstash 실행 : `$ bin/logstash -f date.conf`
     * Standard Input 입력 : `$ 2014-08-01;11:00:22.123`
 * 주요 Configuration Options
-    * match : 날짜 Field를 mapping 하려는 패턴
-    * target : 변경한 값을 저장할 Field 선택
-    * timezone : timezone 설정, 한국의 경우 `Asia/Seoul`
+    * `match` : 날짜 Field를 mapping 하려는 패턴
+    * `target` : 변경한 값을 저장할 Field 선택
+    * `timezone` : timezone 설정, 한국의 경우 `Asia/Seoul`
 
 <a name='mutate'></a>
 #### mutate
