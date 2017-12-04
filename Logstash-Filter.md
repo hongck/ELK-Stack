@@ -60,26 +60,22 @@
     * `skip_empty_columns` : 빈 column이 나올 경우 넘어갈지 설정 (true/false)
     
 
-* 기능
-* 명령어
-* 주요 Configuration Options
-
-
-
-
-
-
-
-
-
-<a name='add'></a>
-#### add
-
-<a name='remove'></a>
-#### remove
-
 <a name='date'></a>
 #### date
+
+[[ images/logstash/filter/date.gif | height = 500px | width = 1024px]]
+
+* 기능 : 날짜 Field를 읽어들여서 event time으로 활용한다
+* 명령어
+   * config 파일 생성 : `$ vim date.conf'
+   * config 파일 편집
+   ```
+   
+   ```
+* 주요 Configuration Options
+    * match
+    * target
+    * timezone : 
 
 <a name='grok'></a>
 #### grok
