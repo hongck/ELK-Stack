@@ -2,7 +2,6 @@
 
 * [csv](#csv)
 * [date](#date)
-* [kv](#kv)
 * [mutate](#mutate)
 * [grok](#grok)
 * [공통 옵션](#common)
