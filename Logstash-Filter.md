@@ -138,13 +138,12 @@
 <a name='grok'></a>
 #### grok
 
-
 * 기능
     * 구조화되지 않은 데이터 처리에 적합
     * 그 중에서도 패턴이 보이는 120 종류 [클릭](https://github.com/elastic/logstash/blob/v1.4.2/patterns/grok-patterns)
 * 명령어
     * 예시1)
-        * [[ images/logstash/filter/grok.gif | height = 500px | width = 1024px]]
+        * [[ images/logstash/filter/grok1.gif | height = 500px | width = 1024px]]
         * config 파일 생성 : `$ vim grok1.conf`
         * config 파일 편집
         ```
