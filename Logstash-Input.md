@@ -360,7 +360,7 @@
             jdbc_driver_class => "com.mysql.jdbc.Driver"
             jdbc_user => "fc"
             jdbc_password => "fc"
-            statement => "SELECT * FROM fc > :sql_last_value"
+            statement => "SELECT * FROM fc WHERE id > :sql_last_value"
             use_column_value => true
             tracking_column => "id"
           }
