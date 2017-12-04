@@ -129,11 +129,11 @@
     }
     ```
 * 주요 Configuration Options
-    * copy : 특정 Field 값과 같은 값을 가지는 Field 생성
-    * split : 특정 Field를 구분자를 이용해서 작은 단위로 나눈다.
-    * update/replace : 특정 Field 값을 변경
-    * rename : 특정 Field 이름 변경
-    * merge : 여러 Field 의 값으로 하나의 배열 생성
+    * `copy` : 특정 Field 값과 같은 값을 가지는 Field 생성
+    * `split` : 특정 Field를 구분자를 이용해서 작은 단위로 나눈다.
+    * `update`/`replace` : 특정 Field 값을 변경
+    * `rename` : 특정 Field 이름 변경
+    * `merge` : 여러 Field 의 값으로 하나의 배열 생성
 
 <a name='grok'></a>
 #### grok
