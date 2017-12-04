@@ -12,8 +12,8 @@
        * [config 생성](https://github.com/higee/elastic/wiki/Logstash-config-%EC%83%9D%EC%84%B1)
        * config 편집
            * [Input](https://github.com/higee/elastic/wiki/Logstash-Input)
-           * [Filter]
            * [Output](https://github.com/higee/elastic/wiki/Logstash-Output)
+           * [Filter](https://github.com/higee/elastic/wiki/Logstash-Filter)
        * 실행
 
 **Kibana**
