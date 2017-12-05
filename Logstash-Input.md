@@ -186,12 +186,11 @@
     * `ignore_older`
         * 이 옵션으로 설정한 시간(초 단위)보다 이전에 수정된 파일은 무시한다
         * 단, 처음에 무시되었지만 그 후에 파일이 새로 수정될 경우는 제대로 수집된다
-        * 특별한 용도로 `ignore_older => 0`과 같이 사용하면 logstash가 이미 조회했던 데이터도 다시 조회한다 [참고](https://stackoverflow.com/questions/39011806/difference-between-ignore-older-and-sincedb-path-in-logstash)
         ```
         input {
           file  {
             path => "/home/ec2-user/fc/logstash-5.6.4/sample/titanic.csv"
-            ignore_older => 0
+            ignore_older => 5
             start_position => "beginning"
           }
         }
