@@ -108,7 +108,6 @@
         * path에서 설정한 파일 중 제외할 파일 설정
         * 복수개 경로를 입력할 때는 배열로 한다 : `exclude => [ "/var/log/171201.log", "/var/log/171202.log" ]`
         * wildcard도 사용 가능하다 : `exclude => "/var/log/1712*.log"`
-        * logstash가 몇 초 주기로 sincedb에 파일을 어디까지 읽었는지 기록할지 설정한다
         ```
         input {
           file  {
