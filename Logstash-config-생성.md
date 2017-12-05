@@ -22,7 +22,7 @@
 
 * 만약에 이미 동작중인 Elasticsearch가 있다면 종료해야 한다
     * process id (pid) 확인 : `$ ps -ef | grep elasticsearch`
-    * [[ images/logstash/input/pid.png | height = 200px | width = 1024px]]
+    * [[ images/logstash/input/pid.png | height = 150px | width = 1024px]]
     * process 종료
         * 명령어 : `$ kill -9 {pid}`
         * 예: `$ kill -9 12510`
