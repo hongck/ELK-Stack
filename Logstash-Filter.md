@@ -138,9 +138,11 @@
 <a name='grok'></a>
 #### grok
 
-* 기능
-    * 구조화되지 않은 데이터 처리에 적합
-    * 그 중에서도 패턴이 보이는 120 종류 [클릭](https://github.com/elastic/logstash/blob/v1.4.2/patterns/grok-patterns)
+* 기능 : 구조화되지 않은 데이터 처리에 적합
+* workflow
+    * 가지고 있는 로그 패턴 발견
+    * grok-patterns를 통해 matching 가능한지 확인[클릭](https://github.com/elastic/logstash/blob/v1.4.2/patterns/grok-patterns)
+    * grok-debugger에서 직접 시도 [클릭](http://grokdebug.herokuapp.com/)
 * 명령어
     * 예시1)
         * [[ images/logstash/filter/grok1.gif | height = 500px | width = 1024px]]
