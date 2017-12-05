@@ -37,7 +37,6 @@
        * `$ wget https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/titanic3.csv`
        * `$ wget https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/apache.log`
        * `$ wget https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/test.log`
-       * `$ wget https://https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/titanic.csv`
 
 <a name='logstash-stdin'></a>
 #### stdin
