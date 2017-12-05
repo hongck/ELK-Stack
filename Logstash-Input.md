@@ -129,6 +129,9 @@
         * 그러므로 logstash를 중단하고 다시 시작해도 중단하기 전의 위치부터 조회하여 데이터를 누락하지 않는다
         * sincedb 파일은 Logstash Home directory 아래 data/plugins/inputs/file 아래 생긴다
             *  실습환경의 경우 : `/home/ec2-user/fc/logstash-5.6.4/data/plugins/inputs/file/`
+        * 만약에 이미 조회한 데이터를 강제로 조회하고 싶으면 `sincedb_path => /dev/null`로 설정한다
+            * [[ images/logstash/input/sincedb_path.png | height = 500px | width = 1024px]]
+
     * `start_position`
         * `beginning` 또는 `end` 중에 하나로 설정한다
         * 파일의 처음부터 조회할지 마지막부터 조회할지 설정하는 옵션으로 default는 streaming 목적으로 `end`다
