@@ -20,6 +20,9 @@
 <a name='elasticsearch-jvm'></a>
 #### elasticsearch JVM options 조정
 
+* 만약에 이미 동작중인 Elasticsearch가 있다면 종료해야 한다
+    * process id (pid) 확인 : `$ ps -ef | grep elasticsearch`
+    * process 종료 : `$ kill -9 {pid}`
 * `$ vim ~/fc/elasticsearch-5.6.4/config/jvm.options`
 * 편집 모드 : `i` 입력
 * 아래 부분 수정
