@@ -28,6 +28,16 @@
 * Elastic이 공식적으로 지원하는 plugin은 [여기](https://www.elastic.co/guide/en/logstash/6.0/input-plugins.html)에서 확인 가능하다
 * 이 외에도 커뮤니티에서 제작한 plugin(예: mongodb input)을 사용해서 수집할 수도 있다
 * 기본적으로 아래 모든 작업은 Logstash Home Directory에서 진행한다 (`/home/ec2-user/fc/logstash-5.6.4/`)
+* 시작에 앞서 실습에 사용할 데이터를 다운 받자
+   * 데이터 다운 받을 디렉토리 생성 : `$ mkdir /home/ec2-user/fc/logstash-5.6.4/sample`
+   * 디렉토리 이동 : `$ cd /home/ec2-user/fc/logstash-5.6.4/sample`
+   * 데이터 다운로드
+       * `$ wget https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/titanic.csv`
+       * `$ wget https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/titanic2.csv`
+       * `$ wget https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/titanic3.csv`
+       * `$ wget https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/apache.log`
+       * `$ wget https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/test.log`
+       * `$ wget https://https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/titanic.csv`
 
 <a name='logstash-stdin'></a>
 #### stdin
@@ -52,7 +62,6 @@
    * logstash 실행 : `$ bin/logstash -f stdin.conf`
    * 데이터 입력 : 콘솔에 아무 내용이나 입력하고 `Enter`를 누른다
 
-
 <a name='logstash-csv'></a>
 
 #### file - csv
@@ -61,8 +70,6 @@
 
 * 기능 : file input plugin을 이용해서 csv 파일을 읽어들인다
 * 명령어
-   * 데이터 다운 받을 디렉토리 생성 : `$ mkdir /home/ec2-user/fc/logstash-5.6.4/sample`
-   * 데이터 다운로드 : `$ wget https://raw.githubusercontent.com/higee/elastic/master/Week4_Logstash/data/titanic.csv -O /home/ec2-user/fc/logstash-5.6.4/sample/titanic.csv`
    * config 파일 생성 : `$ vim csv.conf`
    * config 파일 편집
    ```
