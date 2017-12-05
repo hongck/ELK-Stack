@@ -85,6 +85,7 @@
    }
    ```
    * logstash 실행 : `$ bin/logstash -f csv.conf`
+<a name='file_conf'></a>
 * 주요 Configuration Options (전체 Options은 [elastic](https://www.elastic.co/guide/en/logstash/6.0/plugins-inputs-file.html) 참조)
     * `path`
         * Logstash를 통해 수집하려는 데이터 위치
