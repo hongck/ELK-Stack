@@ -242,7 +242,7 @@
        * 드라이버 다운받을 디렉토리 생성 : `$ mkdir /home/ec2-user/fc/logstash-5.6.4/driver`
        * 디렉토리 이동 : `$ cd driver`
        * jdbc driver 다운로드 :  `$ wget https://downloads.mysql.com/archives/get/file/mysql-connector-java-5.1.36.tar.gz`
-       * 파일 압축 해제 : `$ tar -xzvf mysql-connecttor-java-5.1.36.tar.gz`
+       * 파일 압축 해제 : `$ tar -xzvf mysql-connector-java-5.1.36.tar.gz`
        * 기존 파일 삭제 : `$ rm *.gz`
    * Logstash Home Directory로 이동 : `$ cd ..`
    * config 파일 생성 : `$ vim log.conf`
