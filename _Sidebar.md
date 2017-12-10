@@ -38,4 +38,5 @@
 * [필수 Linux 명령어](https://github.com/higee/elastic/wiki/%ED%95%84%EC%88%98-linux-%EB%AA%85%EB%A0%B9%EC%96%B4)
 
 **연습문제**
-* [Week3](https://github.com/higee/elastic/wiki/Week-3)
+* [Week 3](https://github.com/higee/elastic/wiki/Week-3)
+* [Week 4](https://github.com/higee/elastic/wiki/Week-4)
