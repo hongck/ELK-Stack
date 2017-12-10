@@ -408,14 +408,48 @@ output {
 <a name='ex11'></a>
 #### 문제11
 ```
-* [문제11 : sample.csv를 csf filter로 처리](#ex11)
+sample.csv를 다운 받고 다음과 같은 조건으로 filter 처리해보자
+1. 모든 row를 ,로 구분하자
+2. 각 column 이름을 앞에서부터 idx, item, name, int1, float1, float2, float3, location, item2, float4로 하자 
+3. int1, float1, float2, float3, float4는 각각 integer, float, float, float, float로 datatype을 변형하자
 ```
+
 #### 풀이11
+```
+input {
+  file {
+    path => "/home/ec2-user/fc/logstash-5.6.4/sample/sample.csv"
+    sincedb_path => "/dev/null"
+    start_position => "beginning"
+  }
+}
+
+filter {
+  csv {
+    columns => ["idx", "item", "name", "int1", "float1", "float2", "float3", "location", "float4"]
+    separator => ","
+    convert => {
+      "int1" => "integer"
+      "float1" => "float"
+      "float2" => "float"
+      "float3" => "float"
+      "float4" => "float"
+    }
+  }
+}
+
+output {
+  stdout {
+    codec => rubydebug
+  }
+}
+```
+
 
 <a name='ex12'></a>
 #### 문제12
 ```
-* “Seoul”, “Tokyo”, “Beijing”를 입력 받아서 mutate filter 이용해 다음처럼 출력해보자
+“Seoul”, “Tokyo”, “Beijing”를 입력 받아서 mutate filter 이용해 다음처럼 출력해보자
 "Korea":"Seoul",
 "Japan":"Tokyo",
 "China":"Beijing"
