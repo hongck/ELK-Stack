@@ -450,6 +450,7 @@ output {
 #### 문제12
 ```
 “Seoul”, “Tokyo”, “Beijing”를 입력 받아서 mutate filter 이용해 다음처럼 출력해보자
+---
 "Korea":"Seoul",
 "Japan":"Tokyo",
 "China":"Beijing"
