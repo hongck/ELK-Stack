@@ -42,35 +42,35 @@
 
 <a name='mv'></a>
 #### 파일 잘라내고 붙여넣기 (mv - move)
-* 명령어 : `$ mv {원본 파일 경로/이름} {원본 파일을 이동할 경로/이름}
+* 명령어 : `$ mv {원본 파일 경로/이름} {원본 파일을 이동할 경로/이름}`
 * 예시
     * 코드 : `$ mv ../hello.py ./bye.py`
     * 의미 : 현재 디렉토리 상위에 있는 hello.py를 잘라내서 현재 디렉토리 하위 디렉토리에 bye.py라는 이름으로 붙여넣어라
 
 <a name='tar'></a>
 #### 파일 압축해제 (tar -x)
-* 명령어 : `$ tar {압축해제 할 파일 경로/이름}
+* 명령어 : `$ tar {옵션} {압축해제 할 파일 경로/이름}`
 * 예시
-    * 코드 : `$ tar -xzvf {} `
-    * 의미 : 
+    * 코드 : `$ tar -xzvf elasticsearch-5.6.4.tar.gz`
+    * 의미 : elasticsearch-5.6.4.tar.gz 파일을 압축해제해라
 
 <a name='rm'></a>
 #### 파일 삭제 (rm)
-* 명령어 : `$ rm {삭제할 파일 경로/이름}
+* 명령어 : `$ rm {삭제할 파일 경로/이름}`
 * 예시
-    * 코드 : `$ rm {} `
-    * 의미 : 
+    * 코드 : `$ rm elasticsearch-5.6.4.tar.gz`
+    * 의미 : elasticsearch-5.6.4.tar.gz 파일을 삭제해라
 
 <a name='wget'></a>
-#### 데이터 다운로드 (wget)
-* 명령어 : `$ wget {다운받을 데이터가 업로드 되어 있는 url}
+#### 파일 다운로드 (wget)
+* 명령어 : `$ wget {다운받을 데이터가 업로드 되어 있는 url}`
 * 예시
-    * 코드 : `$ wget `
-    * 의미 : 
+    * 코드 : `$ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.4.tar.gz`
+    * 의미 : https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.4.tar.gz를 다운 받아라
 
 <a name='nohup'></a>
-#### 프로그램(어플리케이션) 백그라운드에서 실행 (nohup)
+#### (터미널 접속이 끊어져도) 프로그램(어플리케이션) 백그라운드에서 실행 (nohup)
 * 명령어 : `$ nohup {실행하려는 프로그램 실행 명령어} &`
 * 예시 
-    * 코드 : 
-    * 의미 
+    * 코드 : `$ nohup bin/elasticsearch &`
+    * 의미 : elasticsearch를 백그라운드에서 실행해라
