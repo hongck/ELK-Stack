@@ -1,6 +1,7 @@
 **Elasticsearch**
    * [Data Type](https://github.com/higee/elastic/wiki/Data-Type)
    * [API](https://github.com/higee/elastic/wiki/API)
+   * [Ingest Node]
    * Aggregation
        * [Bucket Agg](https://github.com/higee/elastic/wiki/Bucket-Agg)
        * [Metric Agg](https://github.com/higee/elastic/wiki/Metric-Agg)
@@ -31,6 +32,10 @@
         * [Manage Field](https://github.com/higee/elastic/wiki/Manage-Field)
         * [JSON Input](https://github.com/higee/elastic/wiki/JSON-Input)
         * [Edit Visualization](https://github.com/higee/elastic/wiki/Visualization-%EC%88%98%EC%A0%95)
+
+**Beats**
+    * [Filebeat]
+    * [Metricbeat]
 
 **Linux**
 * [AWS EC2 생성 및 접속](https://github.com/higee/elastic/wiki/AWS-EC2-Instance-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%A0%91%EC%86%8D)
