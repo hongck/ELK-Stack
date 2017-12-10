@@ -34,8 +34,8 @@
         * [Edit Visualization](https://github.com/higee/elastic/wiki/Visualization-%EC%88%98%EC%A0%95)
 
 **Beats**
-    * [Filebeat]
-    * [Metricbeat]
+    * [Filebeat](https://github.com/higee/elastic/wiki/Filebeat)
+    * [Metricbeat](https://github.com/higee/elastic/wiki/Metricbeat)
 
 **Linux**
 * [AWS EC2 생성 및 접속](https://github.com/higee/elastic/wiki/AWS-EC2-Instance-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%A0%91%EC%86%8D)
