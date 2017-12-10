@@ -11,6 +11,9 @@
     * [Elasticsearch 설치](#install_elasticsearch)
     * [Logstash 설치](#install_logstash)
     * [Kibana 설치](#install_kibana)
+    * Beats 설치
+        * [Filebeat 설치](#install_filebeat)
+        * [Metricbeat 설치](#install_metricbeat)
 * 환경설정
     * [Elasticsearch 환경설정](#configure_elasticsearch)
         * [Bootstarp Checks](#bootstrap)
@@ -21,6 +24,7 @@
 * 애플리케이션 실행
     * [Elasticsearch 시작](#start_elasticsearch)
     * [Kibana 시작](#start_kibana)
+
 ---
 
 <a name='java'></a>
@@ -131,6 +135,38 @@ $ cd fc
 #### Kibana 설치 파일 제거
 
 `$ rm kibana-5.6.4.tar.gz`
+
+---
+
+<a name='install_filebeat'></a>
+### Filebeat 설치
+
+#### Filebeat 다운로드
+`$ wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.6.4-linux-x86_64.tar.gz`
+
+#### Filebeat 설치 파일 압축 해제
+
+`$ tar -xzvf filebeat-5.6.4-linux-x86_64.tar.gz`
+
+#### Filebeat 설치 파일 제거
+
+`$ rm filebeat-5.6.4.tar.gz`
+
+---
+
+<a name='install_metricbeat'></a>
+### Metricbeat 설치
+
+#### Metricbeat 다운로드
+`$ wget https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-5.6.4-linux-x86_64.tar.gz`
+
+#### Metricbeat 설치 파일 압축 해제
+
+`$ tar -xzvf metricbeat-5.6.4-linux-x86_64.tar.gz`
+
+#### Metricbeat 설치 파일 제거
+
+`$ rm metricbeat-5.6.4.tar.gz`
 
 ---
 
