@@ -12,6 +12,7 @@
 * [문제10 : sql_last_value 활용](#ex10)
 * [문제11 : sample.csv를 csf filter로 처리](#ex11)
 * [문제12 : “Seoul”, “Tokyo”, “Beijing”를 mutate filter로 처리](#ex12)
+* [문제13 : S.Korea 27, 2017/12 => 5000를 grok filter로 처리](#ex13)
 
 <a name='ex1'></a>
 #### 문제1
@@ -480,4 +481,14 @@ output {
     codec => rubydebug
   }
 }
+```
+
+#### 문제 13
+```
+S.Korea 27, 2017/12 => 5000를 stdin으로 입력하면 아래처럼 stdout되는 logstash 생성하기
+---
+Country : S.Korea
+Age : 27
+Date : 2017/12
+Salary : 5000
 ```
