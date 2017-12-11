@@ -1,6 +1,6 @@
 ### 개요
 
-[[ images/logstash/ingest_node/architecture.png | height = 500px | width = 1024px]]
+[[ images/ingest_node/architecture.png | height = 500px | width = 1024px]]
 
 * logstash를 통한 파일 전처리 및 전송 기능과 유사한 기능을 elasticsearch ingest node를 통해서 할 수 있다.
 * 100% 대체제 관계는 아니니 사용하는 환경/목적에 따라서 선택해서 사용하길 권장한다
