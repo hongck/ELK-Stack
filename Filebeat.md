@@ -1,4 +1,8 @@
 ### 개요
+
+[[ images/filebeat/beats.png | height = 500px | width = 1024px]]
+(Source : [logz.io](https://logz.io/blog/filebeat-vs-logstash/))
+
 * Filebeat는 Logstash처럼 데이터를 전송하는 기능이 있지만, 전처리하는 기능이 없다
 * 그러므로 log 데이터가 전처리된 형태라면 바로 elasticsearch로 보내고, 그렇지 않으면 logstash로 보내서 전처리하게 하는게 일반적이다
 * Logstash 대신 [Ingest Node](https://github.com/higee/elastic/wiki/Ingest-Node)로 보내서 전처리를 할 수도 있다
