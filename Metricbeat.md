@@ -3,7 +3,7 @@
 * Metricbeat는 서버 모니터링 지표를 수집한다
 * 더욱이 Kibana에서 Dashboard 자동생성도 가능해 쉽고 편하게 사용할 수 있다
 
---
+---
 
 [[ images/metricbeat/main.gif | height = 500px | width = 1024px]]
 
