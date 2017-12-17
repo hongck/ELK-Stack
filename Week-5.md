@@ -638,7 +638,7 @@ POST week5_higee/week5_higee/_update_by_query
 }
 ```
 
-<a name='ex29'</a>
+<a name='ex29'></a>
 #### 문제29
 ```
 고객나이가 20-25세 사이면서 고객주소_시도가 서울특별시이고 고객성별이 남성인 Documents를 삭제해보자
@@ -675,7 +675,7 @@ POST week5_higee/week5_higee/_delete_by_query
 }
 ```
 
-<a name='ex30'</a>
+<a name='ex30'></a>
 #### 문제30
 ```
 Search API를 이용해서 고객나이가 20-25세 사이인 사람들의 평균 상품가격을 구해보자
