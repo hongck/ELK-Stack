@@ -429,6 +429,7 @@ doc['주문시간'].date.dayOfWeek
 Pie Chart를 이용해서 다음과 같은 Visualization을 만들어보자
 ---
 상품가격의 합이 높은 고객주소_시도 3곳 선정하고 각 Pie에서는 상품가격의 합이 큰 상품분류 5곳의 Value Counts를 시각화하자```
+```
 
 #### 풀이 17
 
