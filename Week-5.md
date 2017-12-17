@@ -1,10 +1,36 @@
 ### 목록
 
-* [week5_{id}로 index 생성](#ex1)
-* [week5_{id} index에 mapping 추가](#ex2)
-* [logstash로 데이터 전송하기 (es -> es)](#ex3)
-* [logstash로 데이터 전송하기 (jdbc -> es)](#ex4)
-* [logstash로 데이터 전송하기 (file -> es)](#ex5)
+* [문제1 : week5_{id}로 index 생성](#ex1)
+* [문제2 : week5_{id} index에 mapping 추가](#ex2)
+* [문제3 : logstash로 데이터 전송 (es -> es)](#ex3)
+* [문제4 : logstash로 데이터 전송 (jdbc -> es)](#ex4)
+* [문제5 : logstash로 데이터 전송 (file -> es)](#ex5)
+* [문제6 : Kibana에 Index Pattern 등록](#ex6)
+* [문제7 : Kibana Discover에서 전체 Documents 수 검색](#ex7)
+* [문제8 : Kibana Discover에서 월별 Documents 수 검색](#ex8)
+* [문제9 : Kibana Discover에서 Quick Count 활용](#ex9)
+* [문제10 : Kibana Discover에서 Quick Count 활용2](#ex10)
+* [문제11 : Kibana에서 Data Format 변경 ](#ex11)
+* [문제12 : Scripted Field 생성](#ex12)
+* [문제13 : Scripted Field 생성2](#ex13)
+* [문제14 : Visualization 제작 - Area Chart](#ex14)
+* [문제15 : Visualization 제작 - Gauge](#ex15)
+* [문제16 : Visualization 제작 - Heatmap](#ex16)
+* [문제17 : Visualization 제작 - Pie Chart](#ex17)
+* [문제18 : Visualization 제작 - Data Table](#ex18)
+* [문제19 : Visualization 제작 - Timelion](#ex19)
+* [문제20 : Dashboard 제작](#ex20)
+* [문제21 : Visualization csv export](#ex21)
+* [문제22 : Filter & Lucene Query 활용해서 데이터 검색](#ex22)
+* [문제23 : Filter & Lucene Query 활용해서 데이터 검색2](#ex23)
+* [문제24 : Filter & Lucene Query 활용해서 데이터 검색3](#ex24)
+* [문제25 : Filter & Lucene Query 활용해서 데이터 검색4](#ex25)
+* [문제26 : Filter & Lucene Query 활용해서 데이터 검색5](#ex26)
+* [문제27 : Document API로 데이터 검색](#ex27)
+* [문제28 :](#ex28)
+* [문제29 :](#ex29)
+* [문제30 :](#ex30)
+
 
 <a name='ex1'></a>
 #### 문제1
@@ -418,6 +444,7 @@ Data Table을 이용하여 다음과 같은 Visualization을 만들어보자
 두 번째 column에는 일별 매출 증감
 세 번째 column에는 매출 누적합
 네 번째 column에는 매출 3일 이동 평균
+```
 
 #### 풀이 18
 
@@ -567,14 +594,14 @@ POST week5_higee/week5_higee
 }
 ```
 
-<a name='ex26'></a>
-#### 문제26
+<a name='ex28'></a>
+#### 문제28
 
 ```
 고객나이가 20-25세 사이면서 고객주소_시도가 서울특별시이고 고객성별이 남성인 Documents의 상품분류를 “자켓”으로 바꿔보자
 ```
 
-#### 풀이26
+#### 풀이28
 
 ```
 POST week5_higee/week5_higee/_update_by_query
@@ -609,13 +636,13 @@ POST week5_higee/week5_higee/_update_by_query
 }
 ```
 
-<a name='ex27'</a>
-#### 문제27
+<a name='ex29'</a>
+#### 문제29
 ```
 고객나이가 20-25세 사이면서 고객주소_시도가 서울특별시이고 고객성별이 남성인 Documents를 삭제해보자
 ```
 
-#### 풀이27
+#### 풀이29
 ```
 POST week5_higee/week5_higee/_delete_by_query
 {
@@ -646,13 +673,13 @@ POST week5_higee/week5_higee/_delete_by_query
 }
 ```
 
-<a name='ex28'</a>
-#### 문제28
+<a name='ex30'</a>
+#### 문제30
 ```
 Search API를 이용해서 고객나이가 20-25세 사이인 사람들의 평균 상품가격을 구해보자
 ```
 
-#### 풀이28
+#### 풀이30
 ```
 GET week5_higee/week5_higee/_search
 {
@@ -675,13 +702,13 @@ GET week5_higee/week5_higee/_search
 }
 ```
 
-<a name='ex29'</a>
-#### 문제29
+<a name='ex31'</a>
+#### 문제31
 ```
 Search API를 이용해서 고객주소_시도가 서울특별시거나 경상남도인 사람들의 평균 판매자평점을 구해보자
 ```
 
-#### 풀이29
+#### 풀이31
 ```
 GET week5_higee/week5_higee/_search
 {
@@ -703,13 +730,13 @@ GET week5_higee/week5_higee/_search
 }
 ```
 
-<a name='ex30'</a>
-#### 문제30
+<a name='ex32'</a>
+#### 문제32
 ```
 Search API를 이용해서 Daily 수령시간 별 거래건수가 많은 카드사 3개 별 상품가격이 가장 컸던 상품분류를 구해보자
 ```
 
-#### 풀이30
+#### 풀이32
 ```
 
 GET week5_higee/week5_higee/_search
