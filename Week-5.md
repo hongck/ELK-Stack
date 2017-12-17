@@ -8,29 +8,30 @@
 * [문제6 : Kibana에 Index Pattern 등록](#ex6)
 * [문제7 : Kibana Discover에서 전체 Documents 수 검색](#ex7)
 * [문제8 : Kibana Discover에서 월별 Documents 수 검색](#ex8)
-* [문제9 : Kibana Discover에서 Quick Count 활용](#ex9)
+* [문제9 : Kibana Discover에서 Quick Count 활용1](#ex9)
 * [문제10 : Kibana Discover에서 Quick Count 활용2](#ex10)
 * [문제11 : Kibana에서 Data Format 변경 ](#ex11)
-* [문제12 : Scripted Field 생성](#ex12)
+* [문제12 : Scripted Field 생성1](#ex12)
 * [문제13 : Scripted Field 생성2](#ex13)
-* [문제14 : Visualization 제작 - Area Chart](#ex14)
-* [문제15 : Visualization 제작 - Gauge](#ex15)
-* [문제16 : Visualization 제작 - Heatmap](#ex16)
-* [문제17 : Visualization 제작 - Pie Chart](#ex17)
-* [문제18 : Visualization 제작 - Data Table](#ex18)
-* [문제19 : Visualization 제작 - Timelion](#ex19)
+* [문제14 : Visualization 제작1 - Area Chart](#ex14)
+* [문제15 : Visualization 제작2 - Gauge](#ex15)
+* [문제16 : Visualization 제작3 - Heatmap](#ex16)
+* [문제17 : Visualization 제작4 - Pie Chart](#ex17)
+* [문제18 : Visualization 제작5 - Data Table](#ex18)
+* [문제19 : Visualization 제작6 - Timelion](#ex19)
 * [문제20 : Dashboard 제작](#ex20)
 * [문제21 : Visualization csv export](#ex21)
-* [문제22 : Filter & Lucene Query 활용해서 데이터 검색](#ex22)
+* [문제22 : Filter & Lucene Query 활용해서 데이터 검색1](#ex22)
 * [문제23 : Filter & Lucene Query 활용해서 데이터 검색2](#ex23)
 * [문제24 : Filter & Lucene Query 활용해서 데이터 검색3](#ex24)
 * [문제25 : Filter & Lucene Query 활용해서 데이터 검색4](#ex25)
 * [문제26 : Filter & Lucene Query 활용해서 데이터 검색5](#ex26)
-* [문제27 : Document API로 데이터 검색](#ex27)
-* [문제28 :](#ex28)
-* [문제29 :](#ex29)
-* [문제30 :](#ex30)
-
+* [문제27 : Document API로 데이터 생성](#ex27)
+* [문제28 : Document API로 데이터 수정](#ex28)
+* [문제29 : Document API로 데이터 삭제](#ex29)
+* [문제30 : Search API로 데이터 검색1](#ex30)
+* [문제31 : Search API로 데이터 검색2](#ex31)
+* [문제32 : Search API로 데이터 검색3](#ex32)
 
 <a name='ex1'></a>
 #### 문제1
@@ -703,7 +704,7 @@ GET week5_higee/week5_higee/_search
 }
 ```
 
-<a name='ex31'</a>
+<a name='ex31'></a>
 #### 문제31
 ```
 Search API를 이용해서 고객주소_시도가 서울특별시거나 경상남도인 사람들의 평균 판매자평점을 구해보자
@@ -731,7 +732,7 @@ GET week5_higee/week5_higee/_search
 }
 ```
 
-<a name='ex32'</a>
+<a name='ex32'></a>
 #### 문제32
 ```
 Search API를 이용해서 Daily 수령시간 별 거래건수가 많은 카드사 3개 별 상품가격이 가장 컸던 상품분류를 구해보자
